@@ -1,0 +1,175 @@
+/**********RESET CSS**************/
+article, aside, details, figcaption, figure, footer, header, main, nav, section {
+    display: block;
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    width: 100%; /*largeur de la page */
+    margin: 0 auto; /*centrage*/
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+/*******END RESET CSS*************/
+
+/********VERSION MOBILE***********/
+
+
+/********************HEADER*****************************************/
+
+header{
+    display: inline;
+    float: left;
+    width: 100%;
+    height: 80px;
+}
+#contenu_header{
+    width: 100%;
+    height: 80px;
+    display: inline;
+    float: left;
+    background-color: darkseagreen;
+}
+
+div#logo_paul_gabini{
+    height: 80px;
+    display: inline;
+    float: left;
+    width: 15%;
+    padding-left: 2%;
+}
+#logo_paul_gabini img{
+    width: 80px;
+    height: 100%;
+    display: inline;
+    float: left;
+}
+div#logo_paul_gabini a{
+    width: 80px;
+    height: 100%;
+    display: block;
+    float: left;
+}
+
+#menu-secondaire{
+    width: 85%;
+    display: inline;
+    float: right;
+}
+.icon{
+    display: inline;
+    float: right;
+    padding-right: 2%;
+    font-size: 2.5em;
+    line-height: 80px;
+}
+header input[type=search]{
+    display: none;
+}
+
+/**css du menu hamburger**/
+header nav {
+    z-index: 1000;
+    width: 100%;
+    background-color: #421d18;
+}
+
+header .menu-btn{
+    font-size: 90%;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 100%;
+    display: block;
+    padding: 15px 5px;
+    float: right;
+    width: 25%;
+}
+
+header .menu-btn span{
+    /* float: right;*/
+    display: block; /*les span se placent les uns sous les autres*/
+    width: 50px; /*largeur de la rayure*/
+    height: 5px; /*hauteur de la rayure*/
+    margin: 5px 0; /*on les sépare*/
+    background: rgb(255,255,255); /*couleur des rayures*/
+    z-index: 99;
+}
+.responsive-menu{
+    display: none;
+}
+/*on affiche le menu qd l'utilisateur clique sur le hamburger, on ajoute la classe expand en jQuery*/
+.expand {
+    display: block !important;
+}
+/**fin du css menu hamburger**/
+
+/***********PAGE D'ACCUEIL*************/
+
+#main_accueil{
+    display: inline;
+    float: left;
+    width: 100%;
+    height: 500px;
+}
+/*****FOOTER*********/
+
+footer{
+    width: 100%;
+    height: 100%;
+    display: inline;
+    float: left;
+    padding: 4%;
+    background-color: darkseagreen;
+    margin: 0 auto;
+}
+#navfooter ul{
+    width: 100%;
+    text-align: center;
+}
+
+#navfooter ul li{
+    width: 100%;
+
+}
+#navfooter ul li a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    float: left;
+    color: black;
+    font-weight: bold;
+    padding-bottom: 1%;
+}
+#navfooter ul li a:hover{
+    color: white;
+}
+#reseaux-sociaux{
+    height: 100%;
+    display: inline;
+    float: left;
+    margin: 0 auto;
+
+}
+#reseaux-sociaux ul li{
+    display: inline;
+    float: left;
+}
+#reseaux-sociaux img {
+    width: 50%;
+}
+#reseaux-sociaux ul li a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    float: left;
+
+}
