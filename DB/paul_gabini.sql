@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Sam 03 Juin 2017 à 21:15
+-- Généré le :  Sam 03 Juin 2017 à 23:35
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -55,14 +55,14 @@ CREATE TABLE `recettes` (
   `cuisson` smallint(6) NOT NULL,
   `ingredients` varchar(1000) NOT NULL,
   `preparation` varchar(1030) NOT NULL,
-  `id_categorie` int(11) NOT NULL
+  `categorie_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Contenu de la table `recettes`
 --
 
-INSERT INTO `recettes` (`id`, `nom`, `fichier_img`, `portion`, `temps_preparation`, `cuisson`, `ingredients`, `preparation`, `id_categorie`) VALUES
+INSERT INTO `recettes` (`id`, `nom`, `fichier_img`, `portion`, `temps_preparation`, `cuisson`, `ingredients`, `preparation`, `categorie_id`) VALUES
 (1, 'Croquettes de fromage', 'croquettes-de-fromage.jpg', 4, 20, 20, 'Ingrédients\r\n<ul>\r\n<li>4 tasse d\'eau.</li>\r\n<li>2 tasse de vinaigre de vin blanc.</li>\r\n<li>1 feuille de laurier.</li>\r\n<li>1 anis étoilé.</li>\r\n<li>2 branches de thym frais.</li>\r\n<li>1 pomme Honey Crisp.</li>\r\n<li>2 oignons espagnols.</li>\r\n<li>Huile de pépins de raisin.</li>\r\n<li>Sel.</li>\r\n<li>Piment d\'Espelette.</li>\r\n<li>1 oeuf.</li>\r\n<li>1/4 de tasse de lait.</li>\r\n</ul>\r\n', 'Préparation\r\n<ol>\r\n<li>Dans une grande casserole, verser l\'eau et le vinaigre. Ajouter tous les ingrédients secs.</li>\r\n<li>Amener à ébullition. Retirer du feu et laisser infuser 15 à 20 minutes.</li>\r\n<li>La veille, à l\'aide d\'une mandoline, trancher finement la pomme Honey Crisp. À l\'aide d\'un emporte-pièce rond d\'environ 3cm, tailler des disques de pomme.</li>\r\n<li>Faire 20 disques et les déposer dans la marinade froide pour une nuit.</li>\r\n<li>Peler les oignons et les tailler en deux.</li>\r\n<li>Chauffer la puréee d\'oignon et le reste du miel. Égoutter les disques de pomme marinés.</li>\r\n<li>Disposer les disques de pomme et terminer avec les pousses de céleri feuille.</li>\r\n<li>Ajouter une légère pincée de piment d\'Espelette sur le tout.</li>\r\n<ol>', 1),
 (2, 'Salade de quinoa', 'salade-quinoa.jpg', 4, 10, 20, 'Ingrédients\r\n<ul>\r\n<li>5 tasses de bouillon de légumes.</li>\r\n<li> 3 tasse de quinoa blanc rincé et égoutté.</li>\r\n<li>1 feuille de laurier.</li>\r\n<li>3 pommes Spartan.</li>\r\n<li>1/4 tasse de vinaigre de vin blanc ou de cidre.</li>\r\n<li>1/4 tasse de menthe fraîche, grossièrement hachée.</li>\r\n<li>1/4 tasse de persil italien grossièrement hachée.</li>\r\n<li>Sel et poivre.</li>\r\n</ul>\r\n<li>', 'Préparation\r\n<ol>\r\n<li>Dans une casserole, verser le bouillon et porter à ébullition. Ajouter le quinoa et la feuille de laurier, et porter de nouveau à ébullition. Réduire le feu, couvrir et cuire de 15 à 20 minutes ou jusqu\'à ce que le bouillon soit complètement absorbé. Retirer la feuille de laurier et remuer le quinoa à l\'aide d\'une fourchette.</li>\r\n<li>Couper les pommes en dés, les mettre dans un grand bol et les arroser du jus de citron pour éviter qu\'elles ne brunissent. Ajouter le quinoa réservé, l\'huile et le vinaigre, et mélanger. Saler et poivrer. Étendre le mélange de quinoa réservé dans un plat de service. Parmeser du fromage fêta, des graines de grenade, de la menthe et du persil.</li>\r\n</ol>', 1),
 (3, 'Potage poires et carottes', 'potage-aux-carrots.jpg', 4, 10, 20, 'Ingrédients\r\n<ul>\r\n<li>2 poires.</li>\r\n<li>6 carottes coupées en rondelles.</li>\r\n<li>3 tasses de bouillon de poulet.</li>\r\n<li>1 oignons.</li>\r\n<li>Sel, poivre au gout.</li>\r\n</ul>', 'Préparation \r\n<ol>\r\n<li>Rendre les poires en purée avec le jus et réserver.</li>\r\n<li>Faire revenir les oignons dans un peu d\'huile.</li>\r\n<li>Incorporer tous les autres ingrédients.</li>\r\n<li>Saler et poivrer.</li>\r\n<li>Faire cuire environ 45 minutes.Passer au mélangeur pour rendre le tout homogène.</li>\r\n</ol>', 1),
