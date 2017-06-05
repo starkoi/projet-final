@@ -9,25 +9,24 @@
                 <div class="icon"><span class="fa fa-search" aria-hidden="true"></span>
             </div>
         </div>
-        <form id="barre_de_recherche">
-            <input type="text" id="search" name="search"/>
-            <input type="submit" id="submit_search" name="submit" value="Rechercher">
-        </form>
-        <nav class="responsive-menu">
-            <ul>
-                <li><a href="index.php">Accueil</a></li>
-                <li><a href="biographie.php">Biographie</a></li>
-                <li class="sub-menu"><a>Recettes  <img src="images/arrow_down.png" alt="fleche en bas"></a>
-                    <ul class="children">
-                        <li><a href="recettes.php?cat_id=1">Entrées</a></li>
-                        <li><a href="recettes.php?cat_id=2">Plats pricipaux</a></li>
-                        <li><a href="recettes.php?cat_id=3">Desserts</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        </div>
     </header>
+    <form id="barre_de_recherche">
+        <input type="search" id="search" name="search"/>
+        <input type="submit" id="submit_search" name="submit" value="Rechercher">
+    </form>
+    <nav class="responsive-menu">
+        <ul>
+            <li><a href="index.php">Accueil</a></li>
+            <li><a href="biographie.php">Biographie</a></li>
+            <li class="sub-menu"><a id="hover_a">Recettes  <img src="images/arrow_down.png" alt="fleche en bas"></a>
+                <ul class="children">
+                    <li><a href="recettes.php?cat_id=1">Entrées</a></li>
+                    <li><a href="recettes.php?cat_id=2">Plats pricipaux</a></li>
+                    <li><a href="recettes.php?cat_id=3">Desserts</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
     <main id="main_<?= $name_main; ?>">
 
 

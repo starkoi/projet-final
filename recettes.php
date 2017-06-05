@@ -3,8 +3,8 @@ require_once('views/page_top.php');
 //$nom= (isset($_GET['nom']) && ($_GET['nom']==1 ||($_GET['nom']==2 || ($_GET['nom']==3 ))))? $_GET['nom']: null;
 $cat_id = (isset($_GET['cat_id'])? $_GET['cat_id']: null);
 $recettes = get_recettes_avec_cats($cat_id);
-$recettes_temp = reset($recettes);
 
+$recettes_temp = reset($recettes);
 ?>
 
 <main>
