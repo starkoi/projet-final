@@ -25,16 +25,18 @@ a{
 
 
 /********************HEADER*****************************************/
+header nav {
+    z-index: 1000;
+    width: 100%;
 
+}
 header{
     display: inline;
     float: left;
     width: 100%;
-    height: 80px;
 }
 #contenu_header{
     width: 100%;
-    height: 80px;
     display: inline;
     float: left;
     background-color: darkseagreen;
@@ -44,7 +46,7 @@ div#logo_paul_gabini{
     height: 80px;
     display: inline;
     float: left;
-    width: 15%;
+    width: 20%;
     padding-left: 2%;
 }
 #logo_paul_gabini img{
@@ -61,7 +63,7 @@ div#logo_paul_gabini a{
 }
 
 #menu-secondaire{
-    width: 85%;
+    width: 80%;
     display: inline;
     float: right;
 }
@@ -72,16 +74,9 @@ div#logo_paul_gabini a{
     font-size: 2.5em;
     line-height: 80px;
 }
-header input[type=search]{
-    display: none;
-}
 
 /**css du menu hamburger**/
-header nav {
-    z-index: 1000;
-    width: 100%;
-    background-color: #421d18;
-}
+
 
 header .menu-btn{
     font-size: 90%;
@@ -89,42 +84,110 @@ header .menu-btn{
     font-weight: bold;
     height: 100%;
     display: block;
-    padding: 15px 5px;
+    padding: 15px 3% 15px 0;
     float: right;
-    width: 25%;
 }
 
 header .menu-btn span{
     /* float: right;*/
     display: block; /*les span se placent les uns sous les autres*/
-    width: 50px; /*largeur de la rayure*/
+    width: 40px; /*largeur de la rayure*/
     height: 5px; /*hauteur de la rayure*/
-    margin: 5px 0; /*on les sépare*/
-    background: rgb(255,255,255); /*couleur des rayures*/
+    margin:10px 0; /*on les sépare*/
+    background: black; /*couleur des rayures*/
     z-index: 99;
 }
 .responsive-menu{
     display: none;
 }
+header nav ul {
+    width: 100%;
+    text-align: center;
+}
+header nav ul li{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    border-bottom: 1px solid darkseagreen;
+}
+header ul li a{
+    padding: 2% 0;
+    display: block;
+    color: black;
+    font-weight: bold;
+}
+header ul li a:hover{
+    color: darkseagreen;
+}
+.sub-menu{
+    background-color: darkseagreen;
+    font-weight: bold;
+}
+.sub-menu a:hover{
+    color: white;
+}
+.sub-menu ul li:first-child{
+
+}
+header nav ul li .children {
+    display: none;
+    z-index: 1000;
+}
+
+/*header nav ul li:hover .children{
+    display: block;
+    width: 100%;
+}*/
+
+header nav ul li .children li a {
+    width: 100%;
+    margin: 0;
+}
+
 /*on affiche le menu qd l'utilisateur clique sur le hamburger, on ajoute la classe expand en jQuery*/
 .expand {
-    display: block !important;
+    display: inline !important;
 }
+
 /**fin du css menu hamburger**/
 
-/***********PAGE D'ACCUEIL*************/
+/***barre de recherche**/
+
+#barre_de_recherche{
+    display: none;
+    border: 5px solid black;
+    float: left;
+    width: 100%;
+    z-index: 100;
+}
+#search{
+    width: 80%;
+    text-align: center;
+    float: left;
+}
+#submit_search{
+    width: 20%;
+    float: right;
+    background-color: darkseagreen;
+    font-weight: bold;
+}
+
+
+/***********PAGE D'ACCUEIL mobile***********/
 
 #main_accueil{
     display: inline;
     float: left;
     width: 100%;
-    height: 500px;
+
+
 }
 /*****FOOTER*********/
 
 footer{
     width: 100%;
-    height: 100%;
     display: inline;
     float: left;
     padding: 4%;
@@ -153,23 +216,24 @@ footer{
     color: white;
 }
 #reseaux-sociaux{
-    height: 100%;
+    width: 100%;
     display: inline;
     float: left;
     margin: 0 auto;
-
 }
-#reseaux-sociaux ul li{
+#reseaux-sociaux li{
     display: inline;
     float: left;
+    width: 25%;
+    text-align: center;
+    margin-top: 2%;
 }
 #reseaux-sociaux img {
-    width: 50%;
+    width: 50px;
+    box-shadow: 10px 5px 5px black;
+    border-radius: 25px;
 }
-#reseaux-sociaux ul li a{
-    width: 100%;
-    height: 100%;
+#reseaux-sociaux li a{
     display: block;
-    float: left;
 
 }
