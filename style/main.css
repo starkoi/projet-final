@@ -146,7 +146,7 @@ header .menu-btn span{
 
 /**fin du css menu hamburger**/
 
-/***barre de recherche**/
+/***barre de recherche mobile**/
 
 #barre_de_recherche{
     display: none;
@@ -177,7 +177,6 @@ h1{
 h2{
     text-align: left;
     font-size: 1.5em;
-    margin-left: 2%;
 }
 /***********PAGE D'ACCUEIL MOBILE***********/
 
@@ -189,8 +188,12 @@ h2{
 #main_accueil h2{
     display: inline;
     float: left;
+    margin-left: 2%;
 }
-#main_accueil aside{
+#main_accueil h3{
+    margin-left: 4%;
+}
+#main_accueil .aside_recettes{
     display: none;
 }
 .content_index{
@@ -202,6 +205,7 @@ h2{
     width: 100%;
     display: inline;
     float: left;
+    margin-bottom: 4%;
 }
 .en_savoir_plus{
     color: white;
@@ -210,6 +214,18 @@ h2{
     float: right;
     display: inline;
     margin:2%;
+    font-weight: bold;
+}
+.en_savoir_plus:hover{
+    color: black;
+}
+.pub_lait{
+    width: 20%;
+    height: 74px;
+    position: absolute;
+    top:130px;
+    left: 80%;
+
 }
 /****FIN DE LA PAGE D'ACCUEIL MOBILE****/
 
@@ -363,9 +379,35 @@ footer{
     #submit_search {
         width: 30%;
     }
-    /*#main_accueil aside{
-        display: block;
-    }*/
+    #main_accueil .aside_recettes{
+        display: inline;
+        float: right;
+    }
+    #main_accueil h2{
+        width: 100%;
+    }
+    #main_accueil section{
+        display: inline;
+        float: left;
+       margin-left: 2%;
+        margin-bottom: 2%;
+    }
+    #h3_aside{
+        margin-left: 0!important;
+    }
+    #main_accueil aside{
+        display: inline;
+        float: right;
+        margin-right: 2%;
+    }
+    .pub_lait{
+        display: inline;
+        float: right;
+        position: static;
+        height: 150px;
+    }
+
+
     /************FOOTER TABLETTE*********************/
 
     #navfooter ul{
@@ -386,4 +428,70 @@ footer{
         cursor: pointer;
     }
     /********FIN DU FOOTER*********/
+}
+
+@media only screen and (min-width: 960px){
+    /**************************SYSTEME DE GRILLE***********************/
+    .col-1 {
+        width: 8.33%;
+    }
+
+    /*largeur de 2 colonnes*/
+    .col-2 {
+        width: 16.66%;
+    }
+
+    /*largeur de 3 colonnes*/
+    .col-3 {
+        width: 25%;
+    }
+
+    /*largeur de 4 colonnes*/
+    .col-4 {
+        width: 33.33%;
+    }
+
+    /*largeur de 5 colonnes*/
+    .col-5 {
+        width: 41.66%;
+    }
+
+    /*largeur de 6 colonnes*/
+    .col-6 {
+        width: 50%;
+    }
+
+    /*largeur de 7 colonnes*/
+    .col-7 {
+        width: 58.33%;
+    }
+
+    /*largeur de 8 colonnes*/
+    .col-8 {
+        width: 66.66%;
+    }
+
+    /*largeur de 9 colonnes*/
+    .col-9 {
+        width: 75%;
+    }
+
+    /*largeur de 10 colonnes*/
+    .col-10 {
+        width: 83.33%;
+    }
+
+    /*largeur de 11 colonnes*/
+    .col-11 {
+        width: 91.66%;
+    }
+
+    /*largeur de 12 colonnes*/
+    .col-12 {
+        width: 100%;
+    }
+    .pub_lait{
+        height: 300px;
+    }
+
 }
