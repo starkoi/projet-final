@@ -1,8 +1,7 @@
 <?php
 $page_name = 'Chef Paul Gabini';
 $name_main = 'accueil';
-/*require_once ('common/defines.php');*/
-require_once ('views/page_top.php');
+require_once('views/page_top.php');
 
 ?>
 <h1>Recettes en vedettes</h1>

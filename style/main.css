@@ -229,6 +229,116 @@ h2{
 }
 /****FIN DE LA PAGE D'ACCUEIL MOBILE****/
 
+/******BIOGRAPHIE MOBILE**********/
+
+#main_bio{
+    padding: 4%;
+    text-align: justify;
+    display: inline;
+    float: right;
+}
+.paul{
+    width: 100%;
+}
+.logo_librairies img{
+    width: 50%;
+    display: inline;
+    float: left;
+}
+.logo_librairies img:nth-of-type(2){
+    margin-top: 4.5%;
+}
+
+/*****CONFIGURATION DU SLIDER******/
+/*1*cacher ce qui deborde***/
+#slider{
+    display: block;
+}
+#overflow{
+    width: 100%;
+    overflow: hidden;/*on cache ce qui depasse*/
+
+}
+
+/**2**chaque img occupe 100% de son parent la div .photo*/
+
+.photo img{
+    width: 100%;
+
+}
+
+
+/*3**la div .inner fait une largeur egale au nombre de photos: 5 donc 500%****/
+
+#slides .inner{
+    width: 400%;
+}
+
+/*4***on va aligner les div .photo les une a cote des autres**/
+
+#slides .photo{
+    float: left;
+    width: 25%;/*chaque div.photo occupe 1/5 eme de son parent car 5 photos si 4 photos ce serait 1/4*/
+    position: relative;/*afin de placer le h3 par rapport a la div.photo*/
+}
+
+/*on style le h3 et on le place sur la photo*/
+
+
+/**************************/
+/**FONCTIONNEMENT**/
+
+/*1 **on cachae les input*****/
+
+#slider input{
+    display: none;
+
+}
+
+/*2 on position la div inner en fonction du label sur lequel on clique**/
+/**quand on clique sur le label de l'input #slide1 la div .inner se place à une marge gauche de 0*/
+#slide1:checked ~ #slides .inner{
+    margin-left: 0;
+
+}
+/**quand on clique sur le label de l'input #slide2 la div .inner se place à une marge gauche de -100%*/
+
+#slide2:checked ~ #slides .inner {
+    margin-left: -100%;
+}
+
+
+#slide3:checked ~ #slides .inner {
+    margin-left: -200%;
+}
+
+#slide4:checked ~ #slides .inner {
+    margin-left: -300%;
+}
+
+/**on applique une transition sur la div .inner pour qu'elle se déplace*/
+
+#slides .inner{
+    transition: all 1s ease-in-out;
+}
+
+
+/******************STYLES*DE BOUTONS POUR SLIDER**********/
+
+/*on style les labels**/
+
+#active label{
+    width: 15px;
+    height: 15px;
+    border-radius: 30px;
+    background: darkseagreen;
+    display: inline-block;
+    margin: 10px 5px;
+}
+
+#active{
+    text-align: center;/*on centre les labels*/
+}
 
 /*****FOOTER MOBILE*********/
 
@@ -407,6 +517,17 @@ footer{
         height: 150px;
     }
 
+    /*************BIOGRAPHIE TABLETTE***************/
+
+    .section_gauche {
+        display: inline;
+        float: left;
+    }
+    .section_droite{
+        display: inline;
+        float: right;
+    }
+
 
     /************FOOTER TABLETTE*********************/
 
@@ -430,6 +551,7 @@ footer{
     /********FIN DU FOOTER*********/
 }
 
+/**********VERSION DESKTOP**********/
 @media only screen and (min-width: 960px){
     /**************************SYSTEME DE GRILLE***********************/
     .col-1 {
