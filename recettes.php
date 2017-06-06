@@ -3,8 +3,22 @@ $page_name = 'recettes';
 $name_main = 'recettes';
 require_once('views/page_top.php');
 $cat_id = (isset($_GET['cat_id'])? $_GET['cat_id']: null);
-$recettes = get_recettes_avec_cats($cat_id);
-$recettes_temp = reset($recettes);
+
+$per_page = 2;
+$num_page = $_GET['page'];
+
+if(is_numeric($num_page)){
+    $start = ($num_page-1) * $per_page;
+}else{
+    $start = 0;
+}
+
+$recettes_for_pagination = get_recettes_avec_cats($cat_id,$start, $per_page);
+$recettes_temp = reset($recettes_for_pagination);
+
+
+$recettes_by_cat = get_recettes_avec_cats($cat_id);
+$total_record = count($recettes_by_cat);
 
 ?>
 
@@ -23,31 +37,35 @@ $recettes_temp = reset($recettes);
             $r['id'].((!is_null($cat_id))?"&cat_id=".$cat_id : ""). '">Détails</a>'.
             '</div>';
     }
-    //quantité de recettes par page
-
-    $per_page= 2;
-    if(isset($_GET['page'])){
-        $page = $_GET['page'];
-    } else{
-        $page = 1;
+    if ($total_record==0){
+        echo 'il n\'y a pas de recettes à montrer';
     }
 
-    //la page commence en 0 et elle est multipliée $per_page
-    $start = ($page=1) * $per_page;
-    $query = 'SELECT * FROM recettes LIMIT $start, $per_page';
-    $query = 'SELECT * FROM recettes';
-    $result = mysqli_query($mysqli, $query);
-    $total_record = mysqli_num_rows($result);
-    $total_pages = ceil($total_record / $per_page);
-    //link pour la premiere page
-    echo "<a href = 'recettes.php?cat_id=$cat_id  page=1'>" . 'Première ' . "</a>";
+    $total_pages = $total_record/$per_page;
 
-    for($i=1; $i<=$total_pages;$i++){
-        echo "<a href='recettes.php?cat_id=$cat_id page=". $i ."'>" . $i . "</a>";
-    }
-    //link pour la dernière page
-    echo "<a href='recettes.php?cat_id=$cat_id page=$total_pages'>" . ' Dernière'. "</a>";
     ?>
+<div align="center">
+
+
+    <?php
+    if($num_page>1){
+        echo "<a href='recettes.php?page=".($num_page-1)."'>Précédent </a>";
+    }
+    for($i=1; $i<=$total_pages; $i++){
+        if($i==$num_page){
+            echo $i . "  ";
+        }else {
+            echo "<a href='recettes.php?page=$i'>$i </a>";
+        }
+    }
+    if($num_page<$total_pages){
+        echo "<a href='recettes.php?page=".($num_page+1)."'>Suivante</a>";
+    }
+    ?>
+</div>
+
+
+?>
 
 
 <?php require_once('views/page_bottom.php') ?>
