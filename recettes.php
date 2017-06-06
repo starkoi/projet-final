@@ -4,6 +4,7 @@ $name_main = 'recettes';
 require_once('views/page_top.php');
 $cat_id = (isset($_GET['cat_id'])? $_GET['cat_id']: null);
 
+
 $per_page = 2;
 $num_page = $_GET['page'];
 
@@ -20,6 +21,10 @@ $recettes_temp = reset($recettes_for_pagination);
 $recettes_by_cat = get_recettes_avec_cats($cat_id);
 $total_record = count($recettes_by_cat);
 
+$recettes = get_recettes_avec_cats($cat_id);
+
+
+$recettes_temp = reset($recettes);
 ?>
 
     <h1><?= (isset($_GET['cat_id'])? ucfirst($recettes_temp['cat_nom']): null) ?></h1>

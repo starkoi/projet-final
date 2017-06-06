@@ -5,7 +5,7 @@
         <ul>
             <li><a href="index.php">Accueil</a></li>
             <li><a href="biographie.php">Biographie</a></li>
-            <li><a href="recettes.php">Recettes</a>
+            <li><a href="#">Recettes</a>
             <li><a href="contact.php">Nous joindre</a></li>
         </ul>
     </div>
@@ -15,4 +15,5 @@
         <li><a href="http://www.youtube.com"><img src="images/social/youtube.png"></a></li>
         <li><a href="http://www.twitter.com"><img src="images/social/twitter.png"></a></li>
     </ul>
+    <a href="#"><img  id="top" src="images/top.png" alt="image fleche vers le haut"/></a>
 </footer>

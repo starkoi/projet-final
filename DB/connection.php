@@ -42,7 +42,24 @@ function get_recettes_avec_cats($cat = null, $id_recettes = null) {
     }
     return $result;
 }
-
+function get_recettes_vedettes($vedette) {
+    global $mysqli;
+    $query_str =    "SELECT rct.*, cat.id `cat_id`,cat.nom `cat_nom` ".
+        "FROM `recettes` as rct, `categorie` as cat ".
+        "WHERE ".
+        "rct.categorie_id = cat.id ".
+        "AND rct.vedette = $vedette";
+    $res = $mysqli->query($query_str); // Lancement de la requète
+    $result = array(); // Créer un tableau vide pour mettre toutes les data
+    if ($res && ($res->num_rows > 0)) { // la requete a marché et il y a des enregistrements
+        while ($recettes_data  = $res->fetch_assoc()) {
+            $full_image_path = get_full_image_path($recettes_data);
+            $recettes_data["full_image_path"] = $full_image_path;
+            $result[$recettes_data['id']] = $recettes_data; // Stocker l'enregistrement dans les data
+        }
+    }
+    return $result;
+}
 function get_full_image_path($recettes_data_param){
     $full_image_path= 'images/'.$recettes_data_param["cat_nom"]."/".$recettes_data_param["fichier_img"];
     return $full_image_path;
