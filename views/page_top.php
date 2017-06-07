@@ -1,6 +1,6 @@
 <?php
 require_once('DB/connection.php');
-/*require_once('views/code_panier.php');*/
+require_once('views/code_favori.php');
 ?>
 <!DOCTYPE html>
 <html lang="fr">
