@@ -1,3 +1,11 @@
+<?php
+
+$total = 0;
+foreach ($favori as $qte) {
+    $total += $qte;
+}
+?>
+
     <header>
         <div id="contenu_header" >
             <div id="logo_paul_gabini">
