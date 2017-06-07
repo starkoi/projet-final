@@ -43,6 +43,7 @@ function get_recettes_avec_cats($cat = null, $id_recettes = null) {
     return $result;
 }
 
+
 function get_recettes_by_cat($cat = null, $start_pag = 0, $per_page) {
     global $mysqli;
     $query_str =    "SELECT rct.*, cat.id `cat_id`,cat.nom `cat_nom` ".
@@ -50,7 +51,7 @@ function get_recettes_by_cat($cat = null, $start_pag = 0, $per_page) {
         "WHERE ".
         "rct.categorie_id = cat.id ".
         ((!is_null($cat))? "AND rct.categorie_id = ".$cat." " : "").
-        "AND LIMIT ".$start_pag.", ".$per_page; // Contruction de la requète SQL
+        "LIMIT ".$start_pag.", ".$per_page; // Contruction de la requète SQL
     $res = $mysqli->query($query_str); // Lancement de la requète
     $result = array(); // Créer un tableau vide pour mettre toutes les data
     if ($res && ($res->num_rows > 0)) { // la requete a marché et il y a des enregistrements
