@@ -12,8 +12,9 @@ foreach ($favori as $qte) {
                 <a href="index.php"><img src="images/logo-paul.gif" alt="logo-de-paul-gabini"></a>
             </div>
             <div id="menu-secondaire">
-            <?php require_once('views/menu_principal.php') ?>
-                <div class="icon"><span class="fa fa-heart" aria-hidden="true"></span><a href="favoris.php"></a></div>
+                <?php require_once('views/menu_principal.php') ?>
+                <div class="icon">
+                    <a href="favoris.php"><div><?php echo $total; ?></div><span class="fa fa-heart" aria-hidden="true"></span></a></div>
                 <div class="icon"><span class="fa fa-search" aria-hidden="true"></span>
             </div>
         </div>
