@@ -14,10 +14,10 @@ foreach ($favori as $qte) {
             <div id="menu-secondaire">
                 <?php require_once('views/menu_principal.php') ?>
                 <div class="icon">
-                    <a href="favoris.php"><div><?php echo $total; ?></div><span class="fa fa-heart" aria-hidden="true"></span></a></div>
-                <div class="icon"><span class="fa fa-search" aria-hidden="true"></span>
+                    <a href="favoris.php"><div><?php echo $total; ?></div><span class="fa fa-heart" aria-hidden="true"></span></a>
+                </div>
+                <div class="icon"><span class="fa fa-search" aria-hidden="true"></span></div>
             </div>
-        </div>
     </header>
     <form id="barre_de_recherche">
         <input type="search" id="search" name="search"/>
