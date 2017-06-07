@@ -612,6 +612,14 @@ footer{
     .col-12 {
         width: 100%;
     }
+
+    #wrapper {
+        width: 80%;
+        padding: 0;
+        margin: 0 auto;
+    }
+    
+    /***ACCUEIL***/
     .pub_lait{
         height: 300px;
     }
