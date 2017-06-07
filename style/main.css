@@ -180,7 +180,7 @@ h2{
 }
 /***********PAGE D'ACCUEIL MOBILE***********/
 
-#main_accueil{
+main{
     display: inline;
     float: left;
     width: 100%;
