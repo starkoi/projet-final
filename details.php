@@ -11,22 +11,24 @@ $recette = (isset($recettes[$id_recette])? $recettes[$id_recette]:null);
 
 //echo '<pre>'; var_export($recette); die();
 
-$img = '<img class="img_details" src="' . $recette["full_image_path"] . '" alt= "image de chaussure"/>';
-echo    '<div>'.
-            '<h1>' .ucfirst($recette["nom"]) . '</h1>' .
-            '<div class="img_details">'. $img .'</div>'.
-            '<div class="indication_cuisson">'.
-                '<p>'. "Portion: " . $recette["portion"] . '</p>' .
-                '<p>' . "Temps de préparation: " . $recette["temps_preparation"] . " minutes" . '</p>' .
-                '<p>' . "Cuisson: " . $recette["cuisson"]. " minutes" .  '</p>' .
-            '</div>' .
-            "<a class='en_savoir_plus' ".
-            "href='?op=ajouter".
-            "&itemid=".$id_recette.
-            "&id_recette=".$id_recette.
-            ((!is_null($cat_id))?"&cat_id=".$cat_id : "").
-            ((!is_null($vedette))?"&vedette=".$vedette : "").
-            "'>Ajouter aux favoris</a>".
+$img = '<img class="img_details  col-m-12 col-12" src="' . $recette["full_image_path"] . '" alt= "image de chaussure"/>';
+
+echo        '<h1>' .ucfirst($recette["nom"]) . '</h1>' .
+            '<div class="haut_detail">' .
+                '<div class="img_details  col-m-6 col-6">'. $img .'</div>'.
+                '<div class="indication_cuisson">'.
+                    '<p>'. "Portion: " . $recette["portion"] . '</p>' .
+                    '<p>' . "Temps de préparation: " .  '<br />' . $recette["temps_preparation"] . " minutes" . '</p>' .
+                    '<p>' . "Cuisson: " .  '<br />' . $recette["cuisson"]. " minutes" .  '</p>' .
+                '</div>' .
+            '</div>'.
+                 "<a class='favoris' ".
+                "href='?op=ajouter".
+                "&itemid=".$id_recette.
+                "&id_recette=".$id_recette.
+                ((!is_null($cat_id))?"&cat_id=".$cat_id : "").
+                ((!is_null($vedette))?"&vedette=".$vedette : "").
+                "'>Ajouter aux favoris</a>".
             '<div class="indication_cuisson">'.
                 '<h2>' . "Ingrédients" . '</h2>'.
                     $recette["ingredients"] .
@@ -34,8 +36,6 @@ echo    '<div>'.
             '<div class="indication_cuisson">'.
                 '<h2>' . "Préparations" . '</h2>'.
                     $recette["preparation"] .
-            '</div>' .
-        '</div>';
-
+            '</div>'
 ?>
 <?php require_once ('views/page_bottom.php'); ?>
