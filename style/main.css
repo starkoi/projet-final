@@ -347,9 +347,10 @@ main{
 
 .img_details{
     width: 100%;
+
 }
 #main_details ul{
-    width: 30%;
+    width: 50%;
     list-style-type: square;
     margin-left: auto;
     margin-right: auto;
@@ -364,6 +365,16 @@ main{
     float: left;
     text-align: center;
     font-weight: bold;
+    font-size: 1em;
+}
+.favoris{
+    display: inline;
+    float: right;
+    color: white;
+    background-color: darkseagreen;
+    padding: 2%;
+    font-weight: bold;
+    margin-right: 2%;
 }
 .indication_cuisson{
     display: inline;
@@ -530,7 +541,7 @@ footer{
         float: right;
     }
     #main_accueil h2{
-        width: 100%;
+        width: 98%;
     }
     #main_accueil h3{
         width: 90%;
@@ -568,6 +579,15 @@ footer{
         float: right;
     }
 
+    /************DETAILS TABLETTE********************/
+
+    .haut_detail{
+        display: inline-block;
+        width: 100%;
+    }
+    div.img_details{
+        margin: 0 auto;
+    }
 
     /************FOOTER TABLETTE*********************/
 
