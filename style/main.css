@@ -77,6 +77,12 @@ div#logo_paul_gabini a{
     line-height: 80px;
 }
 
+
+#coeur {
+    background-image: url("/images/coeur.png");
+}
+
+
 /**css du menu hamburger**/
 
 
@@ -343,6 +349,174 @@ main{
 }
 /**********FIN DE LA BIOGRAPHIE MOBILE**********/
 
+/********************PAGE RECETTE MOBBILE****************/
+
+#main_recettes{
+    display: inline;
+    float: left;
+    width: 100%;
+}
+
+#enveloppe-section{
+    display: inline;
+    float: left;
+    width: 100%;
+}
+
+#section_recettes {
+    display: inline;
+    float: left;
+
+}
+
+div.container_recettes {
+    border: 1px dashed black;
+    display: inline;
+    float: left;
+    margin-bottom: 2%;
+}
+.container_recettes h3{
+    margin-left: 4%;
+}
+
+.img_recettes{
+    width: 100%;
+    display: inline;
+    float: left;
+    margin-bottom: 4%;
+    margin-left: 0;
+}
+.ajouter-favori-recettes{
+    display: inline;
+    float: left;
+    margin-bottom: 2%;
+    background-color:darkseagreen;
+    padding: 1%;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    padding-left: 3%;
+}
+
+.ajouter-favori-recettes:hover{
+    color: black;
+}
+
+.en-savoir-plus-recettes{
+    display: inline;
+    float: right;
+    background-color: darkseagreen;
+    padding: 1%;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    padding-left: 3%;
+}
+
+.en-savoir-plus-recettes:hover{
+    color: black;
+}
+
+#aside_recettes {
+    display: block;
+    text-align: center;
+}
+
+.pub_recettes{
+    height: 350px;
+    display: inline;
+    margin: 2%;
+}
+
+
+
+#pagination_recettes{
+    text-align: center;
+}
+
+/*****************PAGE FAVORI MOBILE**********************/
+#main_favori{
+    display: inline;
+    float: left;
+    width: 100%;
+}
+
+#enveloppe-favori{
+    display: inline;
+    float: left;
+    width: 100%;
+}
+
+#section-favori{
+    display: inline;
+    float: left;
+}
+
+div.container-favori{
+    border:1px dashed black;
+    display: inline;
+    float: left;
+    margin-bottom: 2%;
+}
+
+.favori-image{
+    width: 100%;
+    display: inline;
+    float: left;
+    margin-bottom: 4%;
+    margin-left: 0;
+}
+
+.nom-favori{
+    font-size: 1.17em;
+    display: inline-block;
+    text-align: center;
+    margin: auto 0;
+    width: 90%;
+}
+
+.btn_retirer{
+    color: red;
+    font-weight: bolder;
+
+}
+
+.en-savoir-plus-favori{
+    display: inline;
+    float: right;
+    background-color: darkseagreen;
+    padding: 1%;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    padding-left: 3%;
+    margin-top: 2%;
+}
+
+#aside-favori{
+    display: block;
+    text-align: center;
+}
+
+.pub-favori{
+    height: 350px;
+    display: inline;
+    margin: 2%;
+}
+
+#vider-favori{
+    text-align: center;
+}
+#button-vider-favori{
+    width: 100%;
+    display: inline;
+    height: 35px;
+    margin-bottom: 1%;
+}
+
+
+
+
 /************DETAILS MOBILE**************/
 
 .img_details{
@@ -578,6 +752,76 @@ footer{
         display: inline;
         float: right;
     }
+    /******************PAGE RECETTES TABLETTE********/
+
+    #title-recettes{
+        width: 90%;
+        height: 42px;
+        display: inline;
+        float: left;
+        margin: 0 0 0 2%;
+    }
+    .ajouter-favori-recettes{
+        display: inline;
+        float: left;
+        margin: 0 0 0 1%;
+        background-color: darkseagreen;
+        padding: 1%;
+        font-weight: bold;
+        color: white;
+        width: 45%;
+        font-size: 14px;
+    }
+
+    .en-savoir-plus-recettes{
+        display: inline;
+        float: right;
+        background-color: darkseagreen;
+        padding: 1%;
+        font-weight: bold;
+        color: white;
+        width: 37%;
+        margin: 0 1% 0 1%;
+        font-size: 14px;
+    }
+
+    #aside_recettes {
+        display: block;
+        text-align: center;
+    }
+
+    .pub_recettes{
+        height: 400px;
+        display: inline;
+        width: 30%;
+    }
+
+    /*************PAGE FAVORI TABLETTE**************/
+    .section-favori{
+        display: inline;
+        float: left;
+    }
+
+    #title-favori{
+        width: 70%;
+        height: 38px;
+    }
+
+    .aside-favori{
+        display: block;
+        text-align: center;
+    }
+    .pub-favori{
+        height: 400px;
+        display: inline;
+        width: 35%;
+    }
+    #vider-favori{
+        text-align: center;
+    }
+    #button-vider-favori{
+        width: 50%;
+    }
 
     /************DETAILS TABLETTE********************/
 
@@ -683,4 +927,84 @@ footer{
         height: 300px;
     }
 
+    /*************PAGE RECETTES*******************************/
+
+    #title-recettes {
+        width: 100%;
+        height: 42px;
+        display: inline;
+        float: left;
+        margin: 0 0 0 2%;
+        font-size: 110%;
+    }
+    .ajouter-favori-recettes{
+        display: inline;
+        float: left;
+        margin: 0 0 0 1%;
+        background-color: darkseagreen;
+        padding: 1%;
+        font-weight: bold;
+        color: white;
+        width: 55%;
+        font-size: 66%;
+    }
+
+    .en-savoir-plus-recettes{
+        display: inline;
+        float: right;
+        background-color: darkseagreen;
+        padding: 1%;
+        font-weight: bold;
+        color: white;
+        width: 40%;
+        margin: 0 1% 0 1%;
+        font-size: 66%;
+    }
+
+    #section_recettes{
+        margin-left: 2%;
+    }
+
+    #aside_recettes {
+        float: right;
+        position: static;
+        margin-right: 2%;
+    }
+
+
+    .pub_recettes{
+        height: 350px;
+        position: static;
+    }
+
+    #aside_recettes img:nth-of-type(2){
+        margin-top: 15%;
+    }
+
+    .favori-recettes{
+        display: inline-block;
+    }
+    .favori-image{
+        width: 100%;
+    }
+
+    /************PAGE FAVORI*************************/
+
+    #section-favori{
+        margin-left: 2%;
+    }
+
+    #aside-favori{
+        float: right;
+        position: static;
+        margin-right: 2%;
+    }
+    .pub-favori{
+        height: 350px;
+        position: static;
+    }
+
+    #aside-favori img:nth-of-type(2){
+        margin-top: 15%;
+    }
 }
