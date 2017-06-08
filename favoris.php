@@ -1,7 +1,7 @@
 <?php
 $page_name = 'favori';
 $name_main = 'favori';
-require_once ('views/page_top.php');
+require_once('views/page_top.php');
 
 
 ?>
@@ -42,5 +42,5 @@ require_once ('views/page_top.php');
     </form>
 
 <?php
-require_once ('views/page_bottom.php');
+require_once('views/page_bottom.php');
 ?>
