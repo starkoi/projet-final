@@ -1,0 +1,1012 @@
+/**********RESET CSS**************/
+article, aside, details, figcaption, figure, footer, header, main, nav, section {
+    display: block;
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    width: 100%; /*largeur de la page */
+    margin: 0 auto; /*centrage*/
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+/*******END RESET CSS*************/
+
+/********VERSION MOBILE***********/
+
+
+/********************HEADER MOBILE*****************************************/
+.responsive-menu{
+    z-index: 1000;
+    width: 100%;
+
+}
+header{
+    display: inline;
+    float: left;
+    width: 100%;
+}
+#contenu_header{
+    width: 100%;
+    display: inline;
+    float: left;
+    background-color: darkseagreen;
+}
+
+#logo_paul_gabini{
+    display: inline;
+    float: left;
+    width: 20%;
+}
+#logo_paul_gabini img{
+    width: 80px;
+    height: 100%;
+    display: inline;
+    float: left;
+}
+div#logo_paul_gabini a{
+    width: 80px;
+    height: 100%;
+    display: block;
+    float: left;
+}
+/*.nav-mobile{
+    width: 100%;
+    display: inline;
+    float: right;
+}*/
+#menu-secondaire{
+    width: 80%;
+    display: inline;
+    float: right;
+}
+.icon{
+    display: inline;
+    float: right;
+    padding-right: 2%;
+    font-size: 2.5em;
+    line-height: 80px;
+}
+
+/**css du menu hamburger**/
+
+
+header .menu-btn{
+    font-size: 90%;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 100%;
+    display: block;
+    padding: 15px 3% 15px 0;
+    float: right;
+}
+
+header .menu-btn span{
+    /* float: right;*/
+    display: block; /*les span se placent les uns sous les autres*/
+    width: 40px; /*largeur de la rayure*/
+    height: 5px; /*hauteur de la rayure*/
+    margin:10px 0; /*on les sépare*/
+    background: black; /*couleur des rayures*/
+    z-index: 99;
+}
+.responsive-menu{
+    display: none;
+    background-color: white;
+}
+.responsive-menu ul {
+    width: 100%;
+    text-align: center;
+}
+.responsive-menu ul li{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    border-bottom: 1px solid darkseagreen;
+}
+.responsive-menu ul li a{
+    padding: 2% 0;
+    display: block;
+    color: black;
+    font-weight: bold;
+}
+.responsive-menu ul li a:hover{
+    color: darkseagreen;
+}
+.sub-menu{
+    background-color: darkseagreen !important;
+    font-weight: bold;
+}
+#hover_a:hover{
+    color: white;
+}
+.children {
+    display: none;
+    z-index: 1000;
+}
+.children li a {
+    width: 100%;
+    margin: 0;
+}
+
+/*on affiche le menu qd l'utilisateur clique sur le hamburger, on ajoute la classe expand en jQuery*/
+.expand {
+    display: inline !important;
+}
+
+/**fin du css menu hamburger**/
+
+/***barre de recherche mobile**/
+
+#barre_de_recherche{
+    display: none;
+    border: 5px solid black;
+    float: left;
+    width: 100%;
+    z-index: 100;
+}
+#search{
+    width: 80%;
+    text-align: center;
+    float: left;
+}
+#submit_search{
+    width: 20%;
+    float: right;
+    background-color: darkseagreen;
+    font-weight: bold;
+}
+/********FIN DU HEADER MOBILE*******/
+
+h1{
+    text-align: center;
+    font-size: 2em;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+h2{
+    text-align: left;
+    font-size: 1.5em;
+}
+body{
+    background-color: beige;
+    width: 100%;
+}
+/***********PAGE D'ACCUEIL MOBILE***********/
+
+main{
+    display: inline;
+    float: left;
+    width: 100%;
+    background-color: white;
+}
+#main_accueil h2{
+    display: inline;
+    float: left;
+    margin-left: 2%;
+}
+#main_accueil h3{
+    float:left;
+    margin:0 0 0 3%;
+    font-size: 1.3em;
+}
+#main_accueil .aside_recettes{
+    display: none;
+}
+.content_index{
+    border: 1px dashed black;
+    display: inline;
+    float: left;
+}
+.img_index{
+    width: 100%;
+    display: inline;
+    float: left;
+    margin-bottom: 4%;
+}
+.en_savoir_plus{
+    color: white;
+    background-color: darkseagreen;
+    padding: 1%;
+    float: right;
+    display: inline;
+    margin:2%;
+    font-weight: bold;
+}
+.en_savoir_plus:hover{
+    color: black;
+}
+.pub_lait{
+    width: 20%;
+    height: 74px;
+    position: absolute;
+    top:130px;
+    left: 80%;
+
+}
+/****FIN DE LA PAGE D'ACCUEIL MOBILE****/
+
+/******BIOGRAPHIE MOBILE**********/
+
+#main_bio{
+    padding: 4%;
+    text-align: justify;
+    display: inline;
+    float: right;
+}
+.paul{
+    width: 100%;
+}
+.logo_librairies img{
+    width: 50%;
+    display: inline;
+    float: left;
+}
+.logo_librairies img:nth-of-type(2){
+    margin-top: 4.5%;
+}
+
+/*****CONFIGURATION DU SLIDER******/
+/*1*cacher ce qui deborde***/
+#slider{
+    display: block;
+}
+#overflow{
+    width: 100%;
+    overflow: hidden;/*on cache ce qui depasse*/
+
+}
+
+/**2**chaque img occupe 100% de son parent la div .photo*/
+
+.photo img{
+    width: 100%;
+
+}
+
+
+/*3**la div .inner fait une largeur egale au nombre de photos: 5 donc 500%****/
+
+#slides .inner{
+    width: 400%;
+}
+
+/*4***on va aligner les div .photo les une a cote des autres**/
+
+#slides .photo{
+    float: left;
+    width: 25%;/*chaque div.photo occupe 1/5 eme de son parent car 5 photos si 4 photos ce serait 1/4*/
+    position: relative;/*afin de placer le h3 par rapport a la div.photo*/
+}
+
+/*on style le h3 et on le place sur la photo*/
+
+
+/**************************/
+/**FONCTIONNEMENT**/
+
+/*1 **on cachae les input*****/
+
+#slider input{
+    display: none;
+
+}
+
+/*2 on position la div inner en fonction du label sur lequel on clique**/
+/**quand on clique sur le label de l'input #slide1 la div .inner se place à une marge gauche de 0*/
+#slide1:checked ~ #slides .inner{
+    margin-left: 0;
+
+}
+/**quand on clique sur le label de l'input #slide2 la div .inner se place à une marge gauche de -100%*/
+
+#slide2:checked ~ #slides .inner {
+    margin-left: -100%;
+}
+
+
+#slide3:checked ~ #slides .inner {
+    margin-left: -200%;
+}
+
+#slide4:checked ~ #slides .inner {
+    margin-left: -300%;
+}
+
+/**on applique une transition sur la div .inner pour qu'elle se déplace*/
+
+#slides .inner{
+    transition: all 1s ease-in-out;
+}
+
+
+/******************STYLES*DE BOUTONS POUR SLIDER**********/
+
+/*on style les labels**/
+
+#active label{
+    width: 15px;
+    height: 15px;
+    border-radius: 30px;
+    background: darkseagreen;
+    display: inline-block;
+    margin: 10px 5px;
+}
+
+#active{
+    text-align: center;/*on centre les labels*/
+}
+/**********FIN DE LA BIOGRAPHIE MOBILE**********/
+/********************PAGE RECETTE MOBBILE****************/
+
+#main_recettes{
+    display: inline;
+    float: left;
+    width: 100%;
+}
+
+#enveloppe-section{
+    display: inline;
+    float: left;
+    width: 100%;
+}
+
+#section_recettes {
+    display: inline;
+    float: left;
+
+}
+
+div.container_recettes {
+    border: 1px dashed black;
+    display: inline;
+    float: left;
+    margin-bottom: 2%;
+}
+.container_recettes h3{
+    margin-left: 4%;
+}
+
+.img_recettes{
+    width: 100%;
+    display: inline;
+    float: left;
+    margin-bottom: 4%;
+    margin-left: 0;
+}
+.ajouter-favori-recettes{
+    display: inline;
+    float: left;
+    margin-bottom: 2%;
+    background-color:darkseagreen;
+    padding: 1%;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    padding-left: 3%;
+}
+
+.ajouter-favori-recettes:hover{
+    color: black;
+}
+
+.en-savoir-plus-recettes{
+    display: inline;
+    float: right;
+    background-color: darkseagreen;
+    padding: 1%;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    padding-left: 3%;
+}
+
+.en-savoir-plus-recettes:hover{
+    color: black;
+}
+
+#aside_recettes {
+    display: block;
+    text-align: center;
+}
+
+.pub_recettes{
+    height: 350px;
+    display: inline;
+    margin: 2%;
+}
+
+
+
+#pagination_recettes{
+    text-align: center;
+}
+
+/*****************PAGE FAVORI MOBILE**********************/
+#main_favori{
+    display: inline;
+    float: left;
+    width: 100%;
+}
+
+#enveloppe-favori{
+    display: inline;
+    float: left;
+    width: 100%;
+}
+
+#section-favori{
+    display: inline;
+    float: left;
+}
+
+div.container-favori{
+    border:1px dashed black;
+    display: inline;
+    float: left;
+    margin-bottom: 2%;
+}
+
+.favori-image{
+    width: 100%;
+    display: inline;
+    float: left;
+    margin-bottom: 4%;
+    margin-left: 0;
+}
+
+.nom-favori{
+    font-size: 1.17em;
+    display: inline-block;
+    text-align: center;
+    margin: auto 0;
+    width: 90%;
+}
+
+.btn_retirer{
+    color: red;
+    font-weight: bolder;
+
+}
+
+.en-savoir-plus-favori{
+    display: inline;
+    float: right;
+    background-color: darkseagreen;
+    padding: 1%;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    padding-left: 3%;
+    margin-top: 2%;
+}
+
+#aside-favori{
+    display: block;
+    text-align: center;
+}
+
+.pub-favori{
+    height: 350px;
+    display: inline;
+    margin: 2%;
+}
+
+#vider-favori{
+    text-align: center;
+}
+#button-vider-favori{
+    width: 100%;
+    display: inline;
+    height: 35px;
+    margin-bottom: 1%;
+}
+
+/************DETAILS MOBILE**************/
+
+.img_details{
+    width: 100%;
+
+}
+#main_details ul{
+    width: 50%;
+    list-style-type: square;
+    margin-left: auto;
+    margin-right: auto;
+}
+#main_details ol{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#main_details p{
+    width: 33%;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+}
+.favoris{
+    display: inline-block;
+    text-align: center;
+    color: white;
+    background-color: darkseagreen;
+    padding: 2%;
+    font-weight: bold;
+    margin-right: 2%;
+}
+.favoris:hover{
+    color: black;
+}
+.indication_cuisson{
+    display: inline;
+    float: left;
+    width: 100%;
+}
+#main_details h2{
+    text-align: center;
+}
+
+
+
+/*****FOOTER MOBILE*********/
+
+footer{
+    width: 100%;
+    display: inline;
+    float: left;
+    padding: 2%;
+    background-color: darkseagreen;
+    margin: 0 auto;
+}
+#navfooter{
+    display: block;
+    width: 100%;
+
+}
+#navfooter ul{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+#navfooter ul li{
+    width: 100%;
+
+}
+#navfooter ul li a{
+    width: 100%;
+    display: block;
+    float: left;
+    color: black;
+    font-weight: bold;
+    padding-bottom: 1%;
+}
+#navfooter ul li a:hover{
+    color: white;
+}
+#reseaux-sociaux{
+    width: 100%;
+    display: inline;
+    float: left;
+    text-align: center;
+    margin-top: 2%;
+}
+#reseaux-sociaux li{
+    display: inline-block;
+    padding-left: 2%;
+
+}
+#reseaux-sociaux img {
+    width: 50px;
+    box-shadow: 10px 5px 5px black;
+    border-radius: 25px;
+}
+#reseaux-sociaux li a{
+    display: block;
+}
+#top{
+    width: 50px;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+}
+
+/*****FIN DU FOOTER MOBILE*******/
+
+/*****mode tablette****/
+@media only screen and (min-width: 768px){
+
+    /**********************SYSTEM DE GRILLES*******************/
+    .col-m-1{
+        width:8.33%;
+    }
+
+    .col-m-2{
+        width:16.66%;
+    }
+
+    .col-m-3{
+        width:25%;
+    }
+
+    .col-m-4{
+        width:33.33%;
+    }
+
+    .col-m-5{
+        width:41.66%;
+    }
+    .col-m-6{
+        width:50%;
+    }
+    .col-m-7{
+        width:58.33%;
+    }
+    .col-m-8{
+        width:66.66%;
+    }
+    .col-m-9{
+        width:75%;
+    }
+    .col-m-10{
+        width:83.33%;
+    }
+    .col-m-11{
+        width:91.66%;
+    }
+    .col-m-12{
+        width:100%;
+    }
+/******FIN DU SYSTÈME DE GRILLE******/
+
+    /********HEADER TABLETTE*****/
+
+    .nav-mobile{
+        display: none;
+    }
+    .responsive-menu{
+        display: block;
+        float: left;
+    }
+    .responsive-menu ul li{
+        width: 32%;
+    }
+    .sub-menu{
+        background-color: white!important;
+        color: black;
+    }
+    .sub-menu a:hover{
+        color: darkseagreen !important;
+    }
+    .children li{
+        width: 100% !important;
+    }
+    #barre_de_recherche{
+        width: 50%;
+        margin: 2% 25%;
+    }
+
+    /**************FIN DU HEADER TABLETTE**************/
+
+    /************ACCUEIL TABLETTE********/
+
+    #search{
+        width: 70%;
+
+    }
+    #submit_search {
+        width: 30%;
+    }
+    #main_accueil .aside_recettes{
+        display: inline;
+        float: right;
+    }
+    #main_accueil h2{
+        width: 98%;
+    }
+    #main_accueil h3{
+        width: 90%;
+        height: 42px;
+    }
+    #main_accueil section{
+        display: inline;
+        float: left;
+       margin-left: 2%;
+        margin-bottom: 2%;
+    }
+    #h3_aside{
+        margin-left: 0!important;
+    }
+    #main_accueil aside{
+        display: inline;
+        float: right;
+        margin-right: 2%;
+    }
+    .pub_lait{
+        display: inline;
+        float: right;
+        position: static;
+        height: 150px;
+    }
+
+    /*************BIOGRAPHIE TABLETTE***************/
+
+    .section_gauche {
+        display: inline;
+        float: left;
+    }
+    .section_droite{
+        display: inline;
+        float: right;
+    }
+
+    /******************PAGE RECETTES TABLETTE********/
+
+    #title-recettes{
+        width: 90%;
+        height: 42px;
+        display: inline;
+        float: left;
+        margin: 0 0 0 2%;
+    }
+    .ajouter-favori-recettes{
+        display: inline;
+        float: left;
+        margin: 0 0 0 1%;
+        background-color: darkseagreen;
+        padding: 1%;
+        font-weight: bold;
+        color: white;
+        width: 45%;
+        font-size: 14px;
+    }
+
+    .en-savoir-plus-recettes{
+        display: inline;
+        float: right;
+        background-color: darkseagreen;
+        padding: 1%;
+        font-weight: bold;
+        color: white;
+        width: 37%;
+        margin: 0 1% 0 1%;
+        font-size: 14px;
+    }
+
+    #aside_recettes {
+        display: block;
+        text-align: center;
+    }
+
+    .pub_recettes{
+        height: 400px;
+        display: inline;
+        width: 30%;
+    }
+
+    /*************PAGE FAVORI TABLETTE**************/
+    .section-favori{
+        display: inline;
+        float: left;
+    }
+
+    #title-favori{
+        width: 70%;
+        height: 38px;
+    }
+
+    .aside-favori{
+        display: block;
+        text-align: center;
+    }
+    .pub-favori{
+        height: 400px;
+        display: inline;
+        width: 35%;
+    }
+    #vider-favori{
+        text-align: center;
+    }
+    #button-vider-favori{
+        width: 50%;
+    }
+
+
+    /************DETAILS TABLETTE********************/
+
+    .haut_detail{
+        display: inline-block;
+        width: 100%;
+    }
+    div.img_details{
+        margin: 0 auto;
+    }
+
+    /************FOOTER TABLETTE*********************/
+
+    #navfooter ul{
+        display: inline;
+        width: 100%;
+
+    }
+    #navfooter ul li{
+        width: 25%;
+        display: inline;
+    }
+    #navfooter ul li a{
+        width: 25%;
+    }
+    #reseaux-sociaux img:hover {
+        transition: transform 1s;
+        transform: scale(1.3);
+        cursor: pointer;
+    }
+    /********FIN DU FOOTER*********/
+}
+
+/**********VERSION DESKTOP**********/
+@media only screen and (min-width: 960px){
+    /**************************SYSTEME DE GRILLE***********************/
+    .col-1 {
+        width: 8.33%;
+    }
+
+    /*largeur de 2 colonnes*/
+    .col-2 {
+        width: 16.66%;
+    }
+
+    /*largeur de 3 colonnes*/
+    .col-3 {
+        width: 25%;
+    }
+
+    /*largeur de 4 colonnes*/
+    .col-4 {
+        width: 33.33%;
+    }
+
+    /*largeur de 5 colonnes*/
+    .col-5 {
+        width: 41.66%;
+    }
+
+    /*largeur de 6 colonnes*/
+    .col-6 {
+        width: 50%;
+    }
+
+    /*largeur de 7 colonnes*/
+    .col-7 {
+        width: 58.33%;
+    }
+
+    /*largeur de 8 colonnes*/
+    .col-8 {
+        width: 66.66%;
+    }
+
+    /*largeur de 9 colonnes*/
+    .col-9 {
+        width: 75%;
+    }
+
+    /*largeur de 10 colonnes*/
+    .col-10 {
+        width: 83.33%;
+    }
+
+    /*largeur de 11 colonnes*/
+    .col-11 {
+        width: 91.66%;
+    }
+
+    /*largeur de 12 colonnes*/
+    .col-12 {
+        width: 100%;
+    }
+
+    #wrapper {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /***ACCUEIL***/
+    .pub_lait{
+        height: 300px;
+    }
+
+    /*************PAGE RECETTES*******************************/
+
+    #title-recettes {
+        width: 100%;
+        height: 42px;
+        display: inline;
+        float: left;
+        margin: 0 0 0 2%;
+        font-size: 110%;
+    }
+    .ajouter-favori-recettes{
+        display: inline;
+        float: left;
+        margin: 0 0 0 1%;
+        background-color: darkseagreen;
+        padding: 1%;
+        font-weight: bold;
+        color: white;
+        width: 55%;
+        font-size: 66%;
+    }
+
+    .en-savoir-plus-recettes{
+        display: inline;
+        float: right;
+        background-color: darkseagreen;
+        padding: 1%;
+        font-weight: bold;
+        color: white;
+        width: 40%;
+        margin: 0 1% 0 1%;
+        font-size: 66%;
+    }
+
+    #section_recettes{
+        margin-left: 2%;
+    }
+
+    #aside_recettes {
+        float: right;
+        position: static;
+        margin-right: 2%;
+    }
+
+
+    .pub_recettes{
+        height: 350px;
+        position: static;
+    }
+
+    #aside_recettes img:nth-of-type(2){
+        margin-top: 15%;
+    }
+
+    .favori-recettes{
+        display: inline-block;
+    }
+    .favori-image{
+        width: 100%;
+    }
+
+    /************PAGE FAVORI*************************/
+
+    #section-favori{
+        margin-left: 2%;
+    }
+
+    #aside-favori{
+        float: right;
+        position: static;
+        margin-right: 2%;
+    }
+    .pub-favori{
+        height: 350px;
+        position: static;
+    }
+
+    #aside-favori img:nth-of-type(2){
+        margin-top: 15%;
+    }
+
+}

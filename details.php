@@ -15,7 +15,7 @@ $img = '<img class="img_details  col-m-12 col-12" src="' . $recette["full_image_
 
 echo        '<h1>' .ucfirst($recette["nom"]) . '</h1>' .
             '<div class="haut_detail">' .
-                '<div class="img_details  col-m-6 col-6">'. $img .'</div>'.
+                '<div class="img_details  col-m-5 col-5">'. $img .'</div>'.
                 '<div class="indication_cuisson">'.
                     '<p>'. "Portion: " . $recette["portion"] . '</p>' .
                     '<p>' . "Temps de préparation: " .  '<br />' . $recette["temps_preparation"] . " minutes" . '</p>' .
