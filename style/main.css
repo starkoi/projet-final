@@ -48,7 +48,7 @@ header{
     width: 20%;
 }
 #logo_paul_gabini img{
-    width: 80px;
+    width: 142px;
     height: 100%;
     display: inline;
     float: left;
@@ -108,18 +108,19 @@ header .menu-btn span{
     text-align: center;
 }
 .responsive-menu ul li{
-    position: relative;
     display: inline-block;
     width: 100%;
-    text-align: center;
     background-color: white;
-    border-bottom: 1px solid darkseagreen;
+    border-bottom: 1px solid black;
 }
 .responsive-menu ul li a{
     padding: 2% 0;
     display: block;
     color: black;
     font-weight: bold;
+    text-align: center;
+    font-size: 1.4em;
+
 }
 .responsive-menu ul li a:hover{
     color: darkseagreen;
@@ -135,14 +136,18 @@ header .menu-btn span{
     display: none;
     z-index: 1000;
 }
+.children li{
+    border-bottom: 1px solid darkseagreen!important;
+}
 .children li a {
     width: 100%;
     margin: 0;
+    font-size: 1.2em!important;
 }
 
 /*on affiche le menu qd l'utilisateur clique sur le hamburger, on ajoute la classe expand en jQuery*/
 .expand {
-    display: inline !important;
+    display: block !important;
 }
 
 /**fin du css menu hamburger**/
@@ -171,13 +176,22 @@ header .menu-btn span{
 
 h1{
     text-align: center;
-    font-size: 2em;
+    font-size: 2.5em;
     margin-top: 2%;
     margin-bottom: 2%;
+    font-family: 'PT Sans Narrow', sans-serif;
 }
 h2{
     text-align: left;
-    font-size: 1.5em;
+    font-size: 2em;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+h3{
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 1.4em;
+}
+a, p{
+    font-family: 'Muli', sans-serif;
 }
 body{
     background-color: beige;
@@ -186,8 +200,7 @@ body{
 /***********PAGE D'ACCUEIL MOBILE***********/
 
 main{
-    display: inline;
-    float: left;
+    display: inline-block;
     width: 100%;
     background-color: white;
 }
@@ -201,6 +214,34 @@ main{
     margin:0 0 0 3%;
     font-size: 1.3em;
 }
+.h3_index{
+    display: inline-block;
+    width: 100%;
+}
+.hover_img{
+    display: block;
+}
+.hover_img:hover{
+    opacity: 0.6;
+    transition: opacity 1s ;
+}
+.conteneur_favoris_index{
+    width: 100%;
+    float: right;
+    text-align: right;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+#main_accueil .favoris_index:hover{
+    color: red;
+}
+#main_accueil .favoris_index {
+    background-color: darkseagreen;
+    color: white;
+    font-weight: bold;
+    padding: 2%;
+    margin-right: 2%;
+}
 #main_accueil .aside_recettes{
     display: none;
 }
@@ -209,11 +250,28 @@ main{
     display: inline;
     float: left;
 }
+.fa-heart:hover{
+    color: red;
+
+}
+.conteneur_favoris_aside{
+    width: 100%;
+    float: right;
+    text-align: right;
+    margin-bottom: 2%;
+}
+.favoris_aside{
+    background-color: darkseagreen;
+    color: white;
+    font-weight: bold;
+    padding: 2%;
+    margin-right: 2%;
+}
 .img_index{
     width: 100%;
     display: inline;
     float: left;
-    margin-bottom: 4%;
+    margin-bottom: 2%;
 }
 .en_savoir_plus{
     color: white;
@@ -228,11 +286,7 @@ main{
     color: black;
 }
 .pub_lait{
-    width: 20%;
-    height: 74px;
-    position: absolute;
-    top:130px;
-    left: 80%;
+ width: 100%;
 
 }
 /****FIN DE LA PAGE D'ACCUEIL MOBILE****/
@@ -248,14 +302,14 @@ main{
 .paul{
     width: 100%;
 }
+.logo_librairies{
+    display: inline-block;
+}
 .logo_librairies img{
-    width: 50%;
-    display: inline;
-    float: left;
+    width: 100%;
+    display: inline-block;
 }
-.logo_librairies img:nth-of-type(2){
-    margin-top: 4.5%;
-}
+
 
 /*****CONFIGURATION DU SLIDER******/
 /*1*cacher ce qui deborde***/
@@ -361,13 +415,11 @@ main{
     float: left;
     width: 100%;
 }
-
 #section_recettes {
     display: inline;
     float: left;
 
 }
-
 div.container_recettes {
     border: 1px dashed black;
     display: inline;
@@ -377,7 +429,6 @@ div.container_recettes {
 .container_recettes h3{
     margin-left: 4%;
 }
-
 .img_recettes{
     width: 100%;
     display: inline;
@@ -396,11 +447,9 @@ div.container_recettes {
     width: 100%;
     padding-left: 3%;
 }
-
 .ajouter-favori-recettes:hover{
     color: black;
 }
-
 .en-savoir-plus-recettes{
     display: inline;
     float: right;
@@ -411,24 +460,18 @@ div.container_recettes {
     width: 100%;
     padding-left: 3%;
 }
-
 .en-savoir-plus-recettes:hover{
     color: black;
 }
-
 #aside_recettes {
     display: block;
     text-align: center;
 }
-
 .pub_recettes{
     height: 350px;
     display: inline;
     margin: 2%;
 }
-
-
-
 #pagination_recettes{
     text-align: center;
 }
@@ -537,14 +580,22 @@ div.container-favori{
     font-weight: bold;
     font-size: 1em;
 }
+.conteneur_favoris{
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    min-width: 16%;
+    text-align: center ;
+
+}
 .favoris{
-    display: inline-block;
     text-align: center;
     color: white;
     background-color: darkseagreen;
     padding: 2%;
     font-weight: bold;
-    margin-right: 2%;
+    line-height: 40px;
+
 }
 .favoris:hover{
     color: black;
@@ -576,13 +627,14 @@ footer{
 
 }
 #navfooter ul{
-    display: block;
+    display: inline-block;
     width: 100%;
     text-align: center;
 }
 
 #navfooter ul li{
     width: 100%;
+    display: inline-block;
 
 }
 #navfooter ul li a{
@@ -690,8 +742,23 @@ footer{
     .sub-menu a:hover{
         color: darkseagreen !important;
     }
+    .children{
+        width: 32%!important;
+        float: right;
+        margin-right: 2%;
+    }
     .children li{
-        width: 100% !important;
+       display: block!important;
+        width: 100%!important;
+        text-align: center!important; ;
+        border-bottom: 0!important;
+        float: right;
+    }
+    .children li a{
+        padding: 1%!important;
+
+        border-bottom: 1px solid darkseagreen;
+
     }
     #barre_de_recherche{
         width: 50%;
@@ -714,11 +781,14 @@ footer{
         float: right;
     }
     #main_accueil h2{
-        width: 98%;
+        width: 90%;
     }
     #main_accueil h3{
         width: 90%;
-        height: 42px;
+        min-height: 42px;
+    }
+    #main_accueil h2:first-of-type{
+        margin-left: 4%;
     }
     #main_accueil section{
         display: inline;
@@ -726,8 +796,8 @@ footer{
        margin-left: 2%;
         margin-bottom: 2%;
     }
-    #h3_aside{
-        margin-left: 0!important;
+    .h3_aside{
+        margin: 4% 2%!important;
     }
     #main_accueil aside{
         display: inline;
@@ -936,7 +1006,6 @@ footer{
         display: inline;
         float: left;
         margin: 0 0 0 2%;
-        font-size: 110%;
     }
     .ajouter-favori-recettes{
         display: inline;

@@ -8,6 +8,7 @@ require_once('views/code_favori.php');
     <meta charset="UTF-8">
     <title><?= $page_name; ?></title>
     <meta name="description" content=""/>
+    <link href="https://fonts.googleapis.com/css?family=Muli|PT+Sans+Narrow" rel="stylesheet">
     <link rel="stylesheet" href="style/normalize.css"/>
     <link rel="stylesheet" href="style/main.css"/>
     <link rel="stylesheet" href="style/font-awesome-4.7.0/css/font-awesome.min.css"/>

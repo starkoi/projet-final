@@ -27,7 +27,7 @@ require_once('views/page_top.php');
                 <?php  echo"<label for=\"$item_name\"></label>";?>
                 <?php  echo"<h3 id='title-favori'>" . ucfirst($detail_recette[$recette_id]['nom'])."</h3>";?>
                 <?php  echo'<a class="en-savoir-plus-favori" href="details.php?produit_id=' .
-                    $recette_id.((!is_null($cat_id))?"&cat_id=".$cat_id : "").'">En savoir plus</a>'; ?>
+                    $recette_id.((!is_null($cat_id))?"&cat_id=".$cat_id : "").'">Voir la recette</a>'; ?>
                 <a href='?op=maz&itemid=<?= $recette_id ?>' class="btn_retirer">X</a>
                 <?php echo "</div>"?>
 

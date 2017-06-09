@@ -2,7 +2,9 @@
 $page_name = 'Chef Paul Gabini';
 $name_main = 'accueil';
 require_once('views/page_top.php');
-
+$cat_id = (isset($_GET['cat_id'])? $_GET['cat_id']: null);
+$id_recette = (isset($_GET['id_recette'])? $_GET['id_recette']: null);
+$vedette = (isset($_GET['vedette'])? $_GET['vedette']:null);
 ?>
 <h1>Recettes en vedettes</h1>
 <h2 class="h2_index">Entrées</h2>
@@ -10,11 +12,17 @@ require_once('views/page_top.php');
     <?php
     $recettes = get_recettes_vedettes(1);
     foreach ($recettes as $id => $r) {
-        $img = '<img class="img_index col-m-12 col-12" src="' . $r["full_image_path"] . '" alt= "image de la recette"/>';
+        $img = '<a class="hover_img" href="details.php?id_recette=' . $id .'&vedette=1">'.'<img class="img_index col-m-12 col-12" src="' . $r["full_image_path"] . '" alt= "image de la recette"/>'. '</a>';
         echo    '<div class="content_index col-m-6 col-4">'.
                     '<div class="img_index ">'.$img.'</div>'.
-                    '<h3>' .ucfirst($r["nom"]) . '</h3>' .
-                    '<a class="en_savoir_plus" href="details.php?id_recette=' . $id .'&vedette=1">En savoir plus</a>'.
+                    '<div class="h3_index"><h3>' .ucfirst($r["nom"]) . '</h3></div>' .
+                    '<div class="conteneur_favoris_index">'.
+                        '<a class="favoris_index" href="details.php?id_recette=' . $id .'&vedette=1">'.
+                            '<span class="fa fa-heart" aria-hidden="true"></span>'.
+                            'Ajouter aux favoris'.
+                        '</a>'.
+                    '</div>'.
+                    '<a class="en_savoir_plus" href="details.php?id_recette=' . $id .'&vedette=1">Voir la recette</a>'.
                 '</div>';
     }
     ?>
@@ -22,11 +30,17 @@ require_once('views/page_top.php');
     <?php
     $recettes = get_recettes_vedettes(2);
     foreach ($recettes as $id => $r) {
-        $img = '<img class="img_index col-m-12 col-12" src="' . $r["full_image_path"] . '" alt= "image de la recette"/>';
+        $img =  '<a class="hover_img" href="details.php?id_recette=' . $id .'&vedette=2">'.'<img class="img_index col-m-12 col-12" src="' . $r["full_image_path"] . '" alt= "image de la recette"/>'. '</a>';
         echo    '<div class="content_index col-m-6 col-4">'.
                     '<div class="img_index ">'.$img.'</div>'.
-                    '<h3>' .ucfirst($r["nom"]) . '</h3>' .
-                    '<a class="en_savoir_plus" href="details.php?id_recette=' . $id .'&vedette=2">En savoir plus</a>'.
+                    '<div class="h3_index">'.'<h3>' .ucfirst($r["nom"]) . '</h3>' . '</div>' .
+                    '<div class="conteneur_favoris_index">'.
+                        "<a class='favoris_index' ".
+                        "href='?op=ajouter&itemid=".$id.
+                        ((!is_null($vedette))?"&vedette=".$vedette : "").
+                        "'><span class=\"fa fa-heart\" aria-hidden=\"true\"></span> Ajouter aux favoris</a>".
+                    '</div>'.
+                    '<a class="en_savoir_plus" href="details.php?id_recette=' . $id .'&vedette=2">Voir la recette</a>'.
                 '</div>';
     }
     ?>
@@ -34,11 +48,17 @@ require_once('views/page_top.php');
     <?php
     $recettes = get_recettes_vedettes(3);
     foreach ($recettes as $id => $r) {
-        $img ='<img class="img_index col-m-12 col-12" src="' . $r["full_image_path"] . '" alt= "image de la recette"/>';
+        $img = '<a class="hover_img" href="details.php?id_recette=' . $id .'&vedette=3">'.'<img class="img_index col-m-12 col-12" src="' . $r["full_image_path"] . '" alt= "image de la recette"/>'. '</a>';
         echo    '<div class="content_index col-m-6 col-4">'.
                     '<div class="img_index ">'.$img.'</div>'.
-                    '<h3>' .ucfirst($r["nom"]) . '</h3>' .
-                    '<a class="en_savoir_plus" href="details.php?id_recette=' . $id .'&vedette=3">En savoir plus</a>'.
+                    '<div class="h3_index">'.'<h3>' .ucfirst($r["nom"]) . '</h3>' . '</div>' .
+                    '<div class="conteneur_favoris_index">'.
+                        "<a class='favoris_index' ". "href='?op=ajouter&itemid=".$id.
+                        ((!is_null($cat_id))?"&cat_id=".$cat_id : "").
+                        ((!is_null($vedette))?"&vedette=".$vedette : "").
+                         "'><span class=\"fa fa-heart\" aria-hidden=\"true\"></span> Ajouter aux favoris</a>".
+                    '</div>'.
+                    '<a class="en_savoir_plus" href="details.php?id_recette=' . $id .'&vedette=3">Voir la recette</a>'.
                 '</div>';
     }
     ?>
@@ -47,15 +67,21 @@ require_once('views/page_top.php');
     <img class="col-m-12 col-12 pub_lait" src="images/pub_lait.jpg" alt="publicite de lait">
 </aside>
 <aside class="col-m-2 col-2 aside_recettes">
-    <h3 id="h3_aside">Autres recettes</h3>
+    <h3 class="h3_aside">Autres recettes</h3>
     <?php
     $recettes = get_recettes_vedettes(4);
     foreach ($recettes as $id => $r) {
-        $img = '<img class="img_index col-m-12 col-12" src="' . $r["full_image_path"] . '" alt= "image de la recette"/>';
+        $img = '<a class="hover_img" href="details.php?id_recette=' . $id .'&vedette=4">'.'<img class="img_index col-m-12 col-12" src="' . $r["full_image_path"] . '" alt= "image de la recette"/>'. '</a>';
         echo    '<div class="content_index  col-m-12 col-12">'.
                     $img.
-                    '<h3>' .ucfirst($r["nom"]) . '</h3>' .
-                    '<a class="en_savoir_plus" href="details.php?id_recette=' . $id .'&vedette=4">En savoir plus</a>'.
+                    '<div class="div_h3_aside">'.'<h3 class="h3_aside">' .ucfirst($r["nom"]) . '</h3>' . '</div>'.
+                    '<div class="conteneur_favoris_aside">'.
+                        "<a class='favoris_aside' ".
+                        "href='?op=ajouter&itemid=".$id.
+                        ((!is_null($vedette))?"&vedette=".$vedette : "").
+                        "'><span class=\"fa fa-heart\" aria-hidden=\"true\"></span></a>".
+                    '</div>'.
+                    '<a class="en_savoir_plus" href="details.php?id_recette=' . $id .'&vedette=4">Voir la recette</a>'.
                 '</div>';
     }
     ?>

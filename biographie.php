@@ -51,10 +51,9 @@ require_once('views/page_top.php');
         error est eum facere hic nisi nobis numquam, possimus quam quo ratione soluta, vel voluptas? Ratione,
         voluptate!
     </p>
-    <p>Paul Gabini est un chef italien qui à déjà publier un livre sur ses recettes. Vous pouvez trouver son livre dans les magasins suivants.</p>
+    <p>Paul Gabini est un chef italien qui à déjà publier un livre sur ses recettes. Vous pouvez trouver son livre dans les magasins suivants:</p>
     <div class="col-m-12 col-12 logo_librairies">
-        <img class="col-m-12 col-12" src="images/logo-archambault.jpg">
-        <img class="col-m-12 col-12" src="images/logo-renaud-bray.svg">
+        <img class="col-m-12 col-12" src="images/logo-archambault_renaud_bray.jpg">
     </div>
 </div>
 <?php require_once ('views/page_bottom.php'); ?>

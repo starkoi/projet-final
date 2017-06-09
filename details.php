@@ -22,6 +22,7 @@ echo        '<h1>' .ucfirst($recette["nom"]) . '</h1>' .
                     '<p>' . "Cuisson: " .  '<br />' . $recette["cuisson"]. " minutes" .  '</p>' .
                 '</div>' .
             '</div>'.
+            '<div class="conteneur_favoris">'.
                  "<a class='favoris' ".
                 "href='?op=ajouter".
                 "&itemid=".$id_recette.
@@ -29,6 +30,7 @@ echo        '<h1>' .ucfirst($recette["nom"]) . '</h1>' .
                 ((!is_null($cat_id))?"&cat_id=".$cat_id : "").
                 ((!is_null($vedette))?"&vedette=".$vedette : "").
                 "'>Ajouter aux favoris</a>".
+            '</div>'.
             '<div class="indication_cuisson">'.
                 '<h2>' . "Ingrédients" . '</h2>'.
                     $recette["ingredients"] .
