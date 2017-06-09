@@ -27,14 +27,13 @@ foreach ($favori as $qte) {
         <ul>
             <li><a href="index.php">Accueil</a></li>
             <li><a href="biographie.php">Biographie</a></li>
-            <li class="sub-menu"><a id="hover_a">Recettes  <img src="images/arrow_down.png" alt="fleche en bas"></a>
-                <ul class="children">
+            <li class="sub-menu"><a id="hover_a">Recettes  <img src="images/arrow_down.png" alt="fleche en bas"></a>            </li>
+        </ul>
+		<ul class="children">
                     <li><a href="recettes.php?cat_id=1">Entrées</a></li>
                     <li><a href="recettes.php?cat_id=2">Plats pricipaux</a></li>
                     <li><a href="recettes.php?cat_id=3">Desserts</a></li>
-                </ul>
-            </li>
-        </ul>
+       </ul>
     </nav>
     <main id="main_<?= $name_main; ?>">
 
