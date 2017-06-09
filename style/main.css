@@ -77,12 +77,6 @@ div#logo_paul_gabini a{
     line-height: 80px;
 }
 
-
-#coeur {
-    background-image: url("/images/coeur.png");
-}
-
-
 /**css du menu hamburger**/
 
 
@@ -107,6 +101,7 @@ header .menu-btn span{
 }
 .responsive-menu{
     display: none;
+    background-color: white;
 }
 .responsive-menu ul {
     width: 100%;
@@ -184,12 +179,17 @@ h2{
     text-align: left;
     font-size: 1.5em;
 }
+body{
+    background-color: beige;
+    width: 100%;
+}
 /***********PAGE D'ACCUEIL MOBILE***********/
 
 main{
     display: inline;
     float: left;
     width: 100%;
+    background-color: white;
 }
 #main_accueil h2{
     display: inline;
@@ -348,7 +348,6 @@ main{
     text-align: center;/*on centre les labels*/
 }
 /**********FIN DE LA BIOGRAPHIE MOBILE**********/
-
 /********************PAGE RECETTE MOBBILE****************/
 
 #main_recettes{
@@ -514,9 +513,6 @@ div.container-favori{
     margin-bottom: 1%;
 }
 
-
-
-
 /************DETAILS MOBILE**************/
 
 .img_details{
@@ -542,13 +538,16 @@ div.container-favori{
     font-size: 1em;
 }
 .favoris{
-    display: inline;
-    float: right;
+    display: inline-block;
+    text-align: center;
     color: white;
     background-color: darkseagreen;
     padding: 2%;
     font-weight: bold;
     margin-right: 2%;
+}
+.favoris:hover{
+    color: black;
 }
 .indication_cuisson{
     display: inline;
@@ -752,6 +751,7 @@ footer{
         display: inline;
         float: right;
     }
+
     /******************PAGE RECETTES TABLETTE********/
 
     #title-recettes{
@@ -822,6 +822,7 @@ footer{
     #button-vider-favori{
         width: 50%;
     }
+
 
     /************DETAILS TABLETTE********************/
 
@@ -1007,4 +1008,5 @@ footer{
     #aside-favori img:nth-of-type(2){
         margin-top: 15%;
     }
+
 }
