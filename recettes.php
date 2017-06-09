@@ -38,7 +38,7 @@ foreach ($recettes_for_pagination as $id => $r){
         ((!is_null($cat_id))?"&cat_id=".$cat_id : "").
         ((!is_null($num_page))?"&page=".$num_page : "").
         "' class='ajouter-favori-recettes'><span class=\"fa fa-heart\" aria-hidden=\"true\"></span> Ajouter aux favoris </a>".
-        '<a class="en-savoir-plus-recettes" href="details.php?produit_id=' .
+        '<a class="en-savoir-plus-recettes" href="details.php?id_recette=' .
         $r['id'].((!is_null($cat_id))?"&cat_id=".$cat_id : ""). '">En savoir plus</a>'.
         '</div>';
 }
