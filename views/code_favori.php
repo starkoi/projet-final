@@ -27,14 +27,9 @@ if (array_key_exists('op', $_GET)) {
                 } else {
                     $favori[$itemid] = 1;
                 }
-
-                header(
-                    'location: '.(isset($_GET['vedette'])
-                        ?"index.php"
-                        :'recettes.php'.
-                        (isset($_GET['cat_id'])? "?cat_id=".$_GET['cat_id']: "").
-                        (isset($_GET['page'])? "&page=".$_GET['page']: "")
-                    )
+                header('location:'.$_SERVER['PHP_SELF'] .
+                    (isset($_GET['cat_id'])? "?cat_id=".$_GET['cat_id']: "").
+                    (isset($_GET['page'])? "&page=".$_GET['page']: "")
                 );
                 exit();
             }
