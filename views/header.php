@@ -14,7 +14,7 @@ foreach ($favori as $qte) {
             <div id="menu-secondaire">
                 <?php require_once('views/menu_principal.php') ?>
                 <div id="coeur" class="icon">
-                    <a href="favoris.php"><div><?php echo $total; ?></div></a>
+                    <a id="coeur-menu" href="favoris.php"><div><?php echo $total; ?></div></a>
                 </div>
                 <div class="icon"><span class="fa fa-search" aria-hidden="true"></span></div>
             </div>
