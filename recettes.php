@@ -26,10 +26,11 @@ $recettes_temp = reset($recettes_for_pagination);
 
 <h1><?= (isset($_GET['cat_id'])? ucfirst($recettes_temp['cat_nom']): null) ?></h1>
 <?php
-echo '<div id="enveloppe-section">';
-echo '<section id="section_recettes" class="col-m-12 col-9">';
+
+echo '<section id="section_recettes" class="col-m-9 col-9">';
 foreach ($recettes_for_pagination as $id => $r){
-    $img = '<img class="img_recettes col-m-12 col-12" src="'.$r["full_image_path"].'" alt= "image d\'entrées"/>';
+   $img = '<a class="hover_img" href="details.php?id_recette=' . $id .'">'.'<img class="img_recettes col-m-12 col-12" src="' . $r["full_image_path"] . '" alt= "image de la recette"/>'. '</a>';
+
 
     echo    '<div class=" container_recettes col-m-6 col-4">'.
         $img.
@@ -44,14 +45,14 @@ foreach ($recettes_for_pagination as $id => $r){
 }
 
 echo '</section>';
-echo '<aside id="aside_recettes" class="col-m-12 col-2">';
+echo '<aside id="aside_recettes" class="col-m-2 col-2">';
 
 echo '<img class="col-m-3 col-12 pub_recettes" src="images/publicite/publicite-cold-beers.jpg" alt="publicité d\'hamburger"/>';
 echo '<img class="col-m-3 col-12 pub_recettes" src="images/publicite/publicite-hellmanns.jpg" alt="publicité d\'hellmanns"/>';
 
 
 echo '</aside>';
-echo '</div>';
+
 
 if ($total_record==0){
     echo 'il n\'y a pas de recettes à montrer';
@@ -77,7 +78,7 @@ $total_pages = $total_record/$per_page;
         }
     }
     if($num_page<$total_pages){
-        echo "<a href='recettes.php?page=".($num_page+1). ((!is_null($cat_id))?"&cat_id=".$cat_id : "")."'>Suivante</a>";
+        echo "<a href='recettes.php?page=".($num_page+1). ((!is_null($cat_id))?"&cat_id=".$cat_id : "")."'>Suivant</a>";
     }
     ?>
 </div>
