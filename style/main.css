@@ -76,6 +76,10 @@ div#logo_paul_gabini a{
     font-size: 2.5em;
     line-height: 80px;
 }
+#total{
+    font-size: 0.8em;
+    line-height: 80px;
+}
 
 /**css du menu hamburger**/
 
@@ -211,7 +215,8 @@ h2{
 }
 h3{
     font-family: 'PT Sans Narrow', sans-serif;
-    font-size: 1.4em;
+    font-size: 1.5em;
+    width: 90%;
 }
 a, p{
     font-family: 'Muli', sans-serif;
@@ -235,7 +240,6 @@ main{
 #main_accueil h3{
     float:left;
     margin:0 0 0 3%;
-    font-size: 1.3em;
 }
 .h3_index{
     display: inline-block;
@@ -256,14 +260,16 @@ main{
     margin-bottom: 2%;
 }
 #main_accueil .favoris_index:hover{
-    color: red;
+    color: orangered;
 }
 #main_accueil .favoris_index {
+    display: inline-block;
     background-color: darkseagreen;
     color: white;
     font-weight: bold;
     padding: 2%;
-    margin-right: 2%;
+    text-align: center;
+    width: 100%;
 }
 #main_accueil .aside_recettes{
     display: none;
@@ -299,11 +305,12 @@ main{
 .en_savoir_plus{
     color: white;
     background-color: darkseagreen;
-    padding: 1%;
-    float: right;
-    display: inline;
-    margin:2%;
+    padding: 2% 3%;
+    display: inline-block;
+    margin-bottom: 2%;
     font-weight: bold;
+    text-align: center;
+    width: 100%;
 }
 .en_savoir_plus:hover{
     color: black;
@@ -317,16 +324,20 @@ main{
 /******BIOGRAPHIE MOBILE**********/
 
 #main_bio{
-    padding: 4%;
     text-align: justify;
     display: inline;
     float: right;
+}
+#main_bio p{
+    margin: 2% 4%;
 }
 .paul{
     width: 100%;
 }
 .logo_librairies{
     display: inline-block;
+    margin: 2% 2%;
+
 }
 .logo_librairies img{
     width: 100%;
@@ -450,7 +461,6 @@ div.container_recettes {
 #title-recettes{
     margin: 0 0 2% 3%;
     float: left;
-    font-size: 1.1em;
     font-family: 'PT Sans Narrow', sans-serif;
 }
 
@@ -462,8 +472,7 @@ div.container_recettes {
 }
 
 .ajouter-favori-recettes{
-    display: inline;
-    float: right;
+    display: inline-block;
     margin-top: 2%;
     margin-bottom: 3%;
     background-color:darkseagreen;
@@ -471,24 +480,19 @@ div.container_recettes {
     font-weight: bold;
     color: white;
     width: 100%;
-    text-align: right;
-}
-
-.fa-heart:hover{
-    color: red;
+    text-align: center;
 }
 .ajouter-favori-recettes:hover{
-    color: red;
+    color: orangered;
 }
 .en-savoir-plus-recettes{
-    display: inline;
-    float: right;
+    display: inline-block;
     background-color: darkseagreen;
     padding: 2% 3%;
     font-weight: bold;
     color: white;
     width: 100%;
-    text-align: right;
+    text-align: center;
     margin-bottom: 2%;
 }
 
@@ -518,7 +522,9 @@ div.container_recettes {
 #main_favori{
     clear: both;
 }
-
+#h2_favoris{
+    margin-left: 2%;
+}
 #enveloppe-favori{
     display: inline;
     float: left;
@@ -541,7 +547,6 @@ div.container-favori{
 #title-favori{
     margin: 0 0 2% 3%;
     float: left;
-    font-size: 1.2em;
     font-family: 'PT Sans Narrow', sans-serif;
     width: 87%;
 }
@@ -567,14 +572,16 @@ div.container-favori{
     display: inline;
     float: right;
     background-color: darkseagreen;
-    padding: 1% 2% 1% 1%;
+    padding: 2% 0;
     font-weight: bold;
     color: white;
     width: 100%;
-    margin-top: 2%;
-    text-align: right;
+    margin: 2% 0;
+    text-align: center;
 }
-
+.en-savoir-plus-favori:hover{
+    color: black;
+}
 #aside-favori{
     display: inline;
     float: right;
@@ -598,6 +605,12 @@ div.container-favori{
     display: inline;
     height: 35px;
     margin-bottom: 1%;
+    font-weight: bold;
+    background-color: darkseagreen;
+    color: white;
+}
+#button-vider-favori:hover{
+    color: black;
 }
 
 #favori-vide{
@@ -611,13 +624,13 @@ div.container-favori{
     width: 100%;
 
 }
-#main_details ul{
+.indication_cuisson ul{
     width: 50%;
     list-style-type: square;
     margin-left: auto;
     margin-right: auto;
 }
-#main_details ol{
+.indication_cuisson ol{
     width: 75%;
     margin-left: auto;
     margin-right: auto;
@@ -668,8 +681,7 @@ footer{
     float: left;
     padding: 2%;
     background-color: darkseagreen;
-    margin: 0 auto;
-    position: absolute;
+ 
 }
 #navfooter{
     display: block;
@@ -693,7 +705,7 @@ footer{
     float: left;
     color: black;
     font-weight: bold;
-    padding-bottom: 1%;
+    margin: 2% 0;
 }
 #navfooter ul li a:hover{
     color: white;
@@ -848,6 +860,7 @@ footer{
     }
     .h3_aside{
         margin: 4% 2%!important;
+        display: inline-block;
     }
     #main_accueil aside{
         display: inline;
@@ -860,16 +873,47 @@ footer{
         position: static;
         height: 150px;
     }
+    #main_accueil .favoris_index{
+        width: 80%;
+        text-align: center;
+        float: right;
+        margin-right: 2%;
+    }
+    .en_savoir_plus{
+        width: 80%;
+        text-align: center;
+        float: right;
+        margin-right: 2%;
+    }
+    .en_savoir_plus_aside{
+        background-color: darkseagreen;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        float: right;
+        padding: 2%;
+        margin: 2% 2% 2% 0;
+    }
 
     /*************BIOGRAPHIE TABLETTE***************/
 
     .section_gauche {
+        margin-top: 2%;
         display: inline;
         float: left;
+        margin-left: 2%;
     }
     .section_droite{
         display: inline;
         float: right;
+        margin-right: 2%;
+        margin-top: 2%;
+    }
+    .logo_librairies{
+        margin: 2% 2% 2% 0;
+    }
+    #main_bio p{
+        margin: 0;
     }
 
     /******************PAGE RECETTES TABLETTE********/
@@ -889,15 +933,15 @@ footer{
         margin-bottom: 2%;
     }
     .ajouter-favori-recettes{
-        display: block;
+        display: inline-block;
         float: right;
         margin: 2% 2% 3% 0;
         background-color: darkseagreen;
         padding: 2%;
         font-weight: bold;
         color: white;
-        width: 180px;
-        text-align: right;
+        width: 80%;
+        text-align: center;
     }
 
     .en-savoir-plus-recettes{
@@ -907,9 +951,9 @@ footer{
         padding: 2%;
         font-weight: bold;
         color: white;
-        width: 180px;
-        margin: 0 2% 0 0;
-        text-align: right;
+        width: 80%;
+        margin: 0 2% 2% 0;
+        text-align: center;
         clear: both;
     }
 
@@ -949,10 +993,7 @@ footer{
         width: 87%;
         height: 38px;
     }
-    .en-savoir-plus-favori{
-        text-align: center;
-        width: 120px;
-    }
+
     #aside-favori{
         display: inline;
         float: right;
@@ -968,7 +1009,10 @@ footer{
         height: 250px;
         width: 100%;
     }
-
+    .en-savoir-plus-favori{
+        width: 80%;
+        margin-right: 2%;
+    }
     #vider-favori{
         text-align: center;
     }
@@ -1078,21 +1122,20 @@ footer{
 
     /***ACCUEIL***/
     .pub_lait{
-        height: 300px;
+        height: 200px;
     }
 
     /*************PAGE RECETTES*******************************/
 
     .ajouter-favori-recettes{
         display: block;
-        float: right;
         margin: 2% 2% 3% 0;
         background-color: darkseagreen;
         padding: 2%;
         font-weight: bold;
         color: white;
-        width: 180px;
-        text-align: right;
+        width: 80%;
+        text-align: center;
     }
 
     .en-savoir-plus-recettes{
@@ -1102,9 +1145,9 @@ footer{
         padding: 2%;
         font-weight: bold;
         color: white;
-        width: 180px;
-        margin: 0 2% 0 0;
-        text-align: right;
+        width: 80%;
+        margin: 0 2% 2% 0;
+        text-align: center;
         clear: both;
     }
 
