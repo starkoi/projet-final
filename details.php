@@ -4,14 +4,14 @@ $name_main = 'details';
 require_once('views/page_top.php');
 $cat_id = (isset($_GET['cat_id'])? $_GET['cat_id']: null);
 $id_recette = (isset($_GET['id_recette'])? $_GET['id_recette']: null);
-$vedette = (isset($_GET['vedette'])? $_GET['vedette']:null);
+$num_page = (isset($_GET['page'])? $_GET['page']: null);
 
 $recettes = get_recettes_avec_cats(null,$id_recette);
 $recette = (isset($recettes[$id_recette])? $recettes[$id_recette]:null);
 
 //echo '<pre>'; var_export($recette); die();
 
-$img = '<img class="img_details  col-m-12 col-12" src="' . $recette["full_image_path"] . '" alt= "image de chaussure"/>';
+$img = '<img class="img_details  col-m-12 col-12" src="' . $recette["full_image_path"] . '" alt= "image de la recette"/>';
 
 echo        '<h1>' .ucfirst($recette["nom"]) . '</h1>' .
             '<div class="haut_detail">' .
@@ -26,9 +26,9 @@ echo        '<h1>' .ucfirst($recette["nom"]) . '</h1>' .
                  "<a class='favoris' ".
                 "href='?op=ajouter".
                 "&itemid=".$id_recette.
-                "&id_recette=".$id_recette.
-                ((!is_null($cat_id))?"&cat_id=".$cat_id : "").
-                ((!is_null($vedette))?"&vedette=".$vedette : "").
+              // "&id_recette=".$id_recette.
+               ((!is_null($cat_id))?"&cat_id=".$cat_id : "").
+                ((!is_null($num_page))?"&page=".$num_page : "").
                 "'>Ajouter aux favoris</a>".
             '</div>'.
             '<div class="indication_cuisson">'.
