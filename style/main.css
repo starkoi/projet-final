@@ -172,6 +172,29 @@ header .menu-btn span{
     background-color: darkseagreen;
     font-weight: bold;
 }
+
+
+/**********COEUR FAVORI MENU SECONDAIRE**********/
+
+div#coeur{
+    background-image: url("../images/coeur.png");
+    float: right;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: inline;
+    width: 50px;
+    height: 100%;
+    margin-right: 2%;
+}
+
+#coeur-menu{
+    width: 50px;
+    display: block;
+    text-align: center;
+    font-size: 0.8em;
+    color: white;
+}
+
 /********FIN DU HEADER MOBILE*******/
 
 h1{
@@ -450,8 +473,12 @@ div.container_recettes {
     width: 100%;
     text-align: right;
 }
+
+.fa-heart:hover{
+    color: red;
+}
 .ajouter-favori-recettes:hover{
-    color: black;
+    color: red;
 }
 .en-savoir-plus-recettes{
     display: inline;
@@ -574,7 +601,7 @@ div.container-favori{
 }
 
 #favori-vide{
-    min-height: 350px;
+    min-height: 420px;
     margin-left: 2%;
 }
 
@@ -1121,8 +1148,13 @@ footer{
         position: static;
     }
 
-    #aside-favori img:nth-of-type(2){
+    #aside-favori img:nth-of-type(3){
         margin-top: 15%;
     }
 
+    /************FOOTER**************************/
+
+    footer{
+        position: static;
+    }
 }
