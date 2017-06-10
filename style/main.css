@@ -450,7 +450,7 @@ div.container_recettes {
 #title-recettes{
     margin: 0 0 2% 3%;
     float: left;
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-family: 'PT Sans Narrow', sans-serif;
 }
 
@@ -949,7 +949,10 @@ footer{
         width: 87%;
         height: 38px;
     }
-
+    .en-savoir-plus-favori{
+        text-align: center;
+        width: 120px;
+    }
     #aside-favori{
         display: inline;
         float: right;
