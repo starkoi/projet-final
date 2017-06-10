@@ -15,10 +15,10 @@ require_once('views/code_favori.php');
     <meta name="viewport" content="width=device-width, intial-scale=1">
     <meta name="author" content="Sonya Bouchard et Carolina Yi"/>
     <meta name="robots" content="noindex, nofollow"/>
-    <meta property="og:url" content="wwww.chef-paul-gabini.projetisi.com"/>
-    <meta property="og:title" content="Les meilleurs recettes du chef Paul Gabini"/>
-    <meta property="og:description" content=""/>
-    <meta property="og:image" content="images/desserts/creme-brulee.jpg"/>
+    <meta property="og:url" content="wwww.avalanche-de-desserts.projetisi.com"/>
+    <meta property="og:title" content="Le meilleur gâteau au chocolat â Montréal"/>
+    <meta property="og:description" content="Avalanche de desserts sert le meilleur gâteau au chocolat à Montréal Goûtez nos délicieux gâteaux, tartes, muffins et beaucoup plus! Essayez nos produits fraîchement cuits et des gâteaux personnalisés"/>
+    <meta property="og:image" content="images/images-gateaux/meilleur-gateau.jpg"/>
     <!--[if lt IE9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
