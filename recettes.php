@@ -1,5 +1,6 @@
 <?php
-$page_name = 'recettes';
+$page_name = 'Recettes faciles et savoureuses à préparer avec Paul Gabini';
+$content = 'Des recettes originales et delicieuses du chef Paul Gabini reconu pour son fameux poulet à la moutarde';
 $name_main = 'recettes';
 require_once('views/page_top.php');
 
