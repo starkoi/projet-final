@@ -489,9 +489,7 @@ div.container_recettes {
 
 /*****************PAGE FAVORI MOBILE**********************/
 #main_favori{
-    display: inline;
-    float: left;
-    width: 100%;
+    clear: both;
 }
 
 #enveloppe-favori{
@@ -503,6 +501,7 @@ div.container_recettes {
 #section-favori{
     display: inline;
     float: left;
+    width: 100%;
 }
 
 div.container-favori{
@@ -512,25 +511,28 @@ div.container-favori{
     margin-bottom: 2%;
 }
 
+#title-favori{
+    margin: 0 0 2% 3%;
+    float: left;
+    font-size: 1.2em;
+    font-family: 'PT Sans Narrow', sans-serif;
+    width: 87%;
+}
 .favori-image{
     width: 100%;
     display: inline;
     float: left;
-    margin-bottom: 4%;
-    margin-left: 0;
+    margin-bottom: 2%;
+
 }
 
-.nom-favori{
-    font-size: 1.17em;
-    display: inline-block;
-    text-align: center;
-    margin: auto 0;
-    width: 90%;
-}
 
 .btn_retirer{
     color: red;
     font-weight: bolder;
+    background-color: lightgrey;
+    font-size: 1em;
+    margin-right: 2%;
 
 }
 
@@ -538,23 +540,27 @@ div.container-favori{
     display: inline;
     float: right;
     background-color: darkseagreen;
-    padding: 1%;
+    padding: 1% 2% 1% 1%;
     font-weight: bold;
     color: white;
     width: 100%;
-    padding-left: 3%;
     margin-top: 2%;
+    text-align: right;
 }
 
 #aside-favori{
-    display: block;
-    text-align: center;
+    display: inline;
+    float: right;
+    width: 100%;
+}
+
+.pub-favori:nth-of-type(2), .pub-favori:nth-of-type(3) {
+    display: none;
 }
 
 .pub-favori{
-    height: 350px;
-    display: inline;
-    margin: 2%;
+    width:100%;
+    height: 250px;
 }
 
 #vider-favori{
@@ -565,6 +571,11 @@ div.container-favori{
     display: inline;
     height: 35px;
     margin-bottom: 1%;
+}
+
+#favori-vide{
+    min-height: 350px;
+    margin-left: 2%;
 }
 
 /************DETAILS MOBILE**************/
@@ -631,6 +642,7 @@ footer{
     padding: 2%;
     background-color: darkseagreen;
     margin: 0 auto;
+    position: absolute;
 }
 #navfooter{
     display: block;
@@ -890,25 +902,43 @@ footer{
 }
 
     /*************PAGE FAVORI TABLETTE**************/
-    .section-favori{
+
+    #main_favori{
+        clear: both;
+    }
+    #enveloppe-favori{
         display: inline;
         float: left;
+        width: 100%;
+    }
+    #section-favori{
+        display: inline;
+        float: left;
+        width: 75%;
+        margin-left: 2%;
     }
 
     #title-favori{
-        width: 70%;
+        width: 87%;
         height: 38px;
     }
 
-    .aside-favori{
-        display: block;
-        text-align: center;
-    }
-    .pub-favori{
-        height: 400px;
+    #aside-favori{
         display: inline;
-        width: 35%;
+        float: right;
+        width: 16.66%;
+        margin-right: 2%;
     }
+    .pub-favori:nth-of-type(1){
+        display: none;
+
+    }
+    .pub-favori:nth-of-type(2), .pub-favori:nth-of-type(3){
+        display: block;
+        height: 250px;
+        width: 100%;
+    }
+
     #vider-favori{
         text-align: center;
     }
