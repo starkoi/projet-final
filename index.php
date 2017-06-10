@@ -4,7 +4,7 @@ $name_main = 'accueil';
 require_once('views/page_top.php');
 $cat_id = (isset($_GET['cat_id'])? $_GET['cat_id']: null);
 $id_recette = (isset($_GET['id_recette'])? $_GET['id_recette']: null);
-$vedette = (isset($_GET['vedette'])? $_GET['vedette']:null);
+$num_page = (isset($_GET['page'])? $_GET['page']: null);
 ?>
 <h1>Recettes en vedettes</h1>
 <h2 class="h2_index">Entrées</h2>
@@ -17,10 +17,10 @@ $vedette = (isset($_GET['vedette'])? $_GET['vedette']:null);
                     '<div class="img_index ">'.$img.'</div>'.
                     '<div class="h3_index"><h3>' .ucfirst($r["nom"]) . '</h3></div>' .
                     '<div class="conteneur_favoris_index">'.
-                        '<a class="favoris_index" href="details.php?id_recette=' . $id .'&vedette=1">'.
-                            '<span class="fa fa-heart" aria-hidden="true"></span>'.
-                            'Ajouter aux favoris'.
-                        '</a>'.
+                        "<a class='favoris_index' ".
+                        "href='?op=ajouter&itemid=".$id.
+                        ((!is_null($num_page))?"&page=".$num_page : "").
+                        "'><span class=\"fa fa-heart\" aria-hidden=\"true\"></span> Ajouter aux favoris</a>".
                     '</div>'.
                     '<a class="en_savoir_plus" href="details.php?id_recette=' . $id .'&vedette=1">Voir la recette</a>'.
                 '</div>';
@@ -37,7 +37,7 @@ $vedette = (isset($_GET['vedette'])? $_GET['vedette']:null);
                     '<div class="conteneur_favoris_index">'.
                         "<a class='favoris_index' ".
                         "href='?op=ajouter&itemid=".$id.
-                        ((!is_null($vedette))?"&vedette=".$vedette : "").
+                        ((!is_null($num_page))?"&page=".$num_page : "").
                         "'><span class=\"fa fa-heart\" aria-hidden=\"true\"></span> Ajouter aux favoris</a>".
                     '</div>'.
                     '<a class="en_savoir_plus" href="details.php?id_recette=' . $id .'&vedette=2">Voir la recette</a>'.
@@ -53,10 +53,10 @@ $vedette = (isset($_GET['vedette'])? $_GET['vedette']:null);
                     '<div class="img_index ">'.$img.'</div>'.
                     '<div class="h3_index">'.'<h3>' .ucfirst($r["nom"]) . '</h3>' . '</div>' .
                     '<div class="conteneur_favoris_index">'.
-                        "<a class='favoris_index' ". "href='?op=ajouter&itemid=".$id.
-                        ((!is_null($cat_id))?"&cat_id=".$cat_id : "").
-                        ((!is_null($vedette))?"&vedette=".$vedette : "").
-                         "'><span class=\"fa fa-heart\" aria-hidden=\"true\"></span> Ajouter aux favoris</a>".
+                        "<a class='favoris_index' ".
+                        "href='?op=ajouter&itemid=".$id.
+                        ((!is_null($num_page))?"&page=".$num_page : "").
+                        "'><span class=\"fa fa-heart\" aria-hidden=\"true\"></span> Ajouter aux favoris</a>".
                     '</div>'.
                     '<a class="en_savoir_plus" href="details.php?id_recette=' . $id .'&vedette=3">Voir la recette</a>'.
                 '</div>';
@@ -78,10 +78,10 @@ $vedette = (isset($_GET['vedette'])? $_GET['vedette']:null);
                     '<div class="conteneur_favoris_aside">'.
                         "<a class='favoris_aside' ".
                         "href='?op=ajouter&itemid=".$id.
-                        ((!is_null($vedette))?"&vedette=".$vedette : "").
+                        ((!is_null($num_page))?"&page=".$num_page : "").
                         "'><span class=\"fa fa-heart\" aria-hidden=\"true\"></span></a>".
                     '</div>'.
-                    '<a class="en_savoir_plus" href="details.php?id_recette=' . $id .'&vedette=4">Voir la recette</a>'.
+                    '<a class="en_savoir_plus_aside" href="details.php?id_recette=' . $id .'&vedette=4">Voir la recette</a>'.
                 '</div>';
     }
     ?>
