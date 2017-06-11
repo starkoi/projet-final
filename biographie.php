@@ -1,6 +1,11 @@
 <?php
+require_once('views/fonction.php');
 $page_name = 'Biographie de Paul Gabini';
 $name_main = 'bio';
+$desc = "Biographie sur le chef Paul Gabini, un chef avec des recettes facile à faire";
+$og_title = "Biographie du chef Paul Gabini";
+$og_desc = "Biographie sur le chef Gabini, un expert en cuisine";
+$og_img = "images/carrousel/chef-paul.jpg";
 require_once('views/page_top.php');
 ?><!--conteneur du slider au complet-->
 <section id="slider" class="col-m-5 col-5 section_gauche">
@@ -53,7 +58,7 @@ require_once('views/page_top.php');
     </p>
     <p>Paul Gabini est un chef italien qui à déjà publier un livre sur ses recettes. Vous pouvez trouver son livre dans les magasins suivants:</p>
     <div class="col-m-12 col-12 logo_librairies">
-        <img class="col-m-12 col-12" src="images/logo-archambault_renaud_bray.jpg">
+        <img class="col-m-12 col-12" src="images/logo-archambault_renaud_bray.jpg" alt="logo de archambault et renaud-bray">
     </div>
 </div>
 <?php require_once ('views/page_bottom.php'); ?>
