@@ -1,11 +1,10 @@
 <?php
 require_once('views/fonction.php');
 $page_name = 'Retrouvez toutes vos recettes préférées du chef Paul Gabini';
-$content = 'Vous trouverez facilement la liste de vos recettes favoris.';
 $name_main = 'favori';
-$desc = "";
-$og_title = "";
-$og_desc = "";
+$desc = 'Vous trouverez facilement la liste de vos recettes favoris.';
+$og_title = "Mes recettes favories";
+$og_desc = "Gardez vos recettes favories";
 $og_img = "";
 require_once('views/page_top.php');
 ?>
@@ -19,7 +18,7 @@ require_once('views/page_top.php');
                 $item_name = 'cart_item_' . $recette_id;
                 ?>
                 <?php  echo '<div class="container-favori col-m-4 col-4">';?>
-                <?php  echo"<img class=\"favori-image col-m-12 col-12\" src=\"$img_recette\" alt=\"images de vos recettes favorites\"/>";?>
+                <?php  echo"<img class=\"favori-image col-m-12 col-12\" src=\"$img_recette\" alt=\". ". ucfirst($recette_id['nom']).".\"/>";?>
                 <?php  echo"<label for=\"$item_name\"></label>";?>
                 <?php  echo"<h3 id='title-favori'>" . ucfirst($detail_recette[$recette_id]['nom'])."</h3>";?>
                 <a href='?op=maz&itemid=<?= $recette_id ?>' class="btn_retirer">X</a>
@@ -29,7 +28,7 @@ require_once('views/page_top.php');
             <?php } ?>
         </section>
         <aside id="aside-favori" class="col-m-2 col-2">
-            <img class="pub-favori col-m-3 col-12" src="images/publicite/publicite-mccormick.jpg" alt="publicité d\'eskal"/>
+            <img class="pub-favori col-m-3 col-12" src="images/publicite/publicite-eskal.jpg" alt="publicité d\'eskal"/>
             <img class="pub-favori col-m-3 col-12" src="images/publicite/publicite-mccormick.jpg" alt="publicité de mccormick"/>
             <img class="pub-favori col-m-3 col-12" src="images/publicite/publicite-island-oasis.jpg" alt="publicité d\island-oasis"/>
         </aside>
@@ -43,3 +42,5 @@ require_once('views/page_top.php');
 <?php
 require_once ('views/page_bottom.php');
 ?>
+
+
