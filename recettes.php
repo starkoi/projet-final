@@ -14,12 +14,11 @@ $recettes_temp = reset($recettes_for_pagination);
 
 
 $page_name = 'Recettes faciles et savoureuses à préparer avec Paul Gabini';
-$content = 'Des recettes originales et delicieuses du chef Paul Gabini reconu pour son fameux poulet à la moutarde';
 $name_main = 'recettes';
-$desc = "";
-$og_title = "";
-$og_desc = "";
-$og_img = "";
+$desc = 'Des recettes originales et delicieuses du chef Paul Gabini reconu pour son fameux poulet à la moutarde';
+$og_title = "Un extraire de son premier livre de recettes du che Paul Gabini ";
+$og_desc = "Un de ses recettes favories du chef Paul Gabini \"creme bruleé\"";
+$og_img = "images/desserts/creme-brulee.jpg";
 require_once('views/page_top.php');
 
 if(is_numeric($num_page)){
@@ -30,8 +29,7 @@ if(is_numeric($num_page)){
 <?php
 echo '<section id="section_recettes" class="col-m-9 col-9">';
 foreach ($recettes_for_pagination as $id => $r){
-   $img = '<a class="hover_img" href="details.php?id_recette=' . $id .'">'.'<img class="img_recettes col-m-12 col-12" src="' . $r["full_image_path"] . '" alt= "image de la recette"/>'. '</a>';
-
+   $img = '<a class="hover_img" href="details.php?id_recette=' . $id .'">'.'<img class="img_recettes col-m-12 col-12" src="' . $r["full_image_path"] . '" alt="' . ucfirst($r['nom']).'"/>'. '</a>';
 
     echo    '<div class=" container_recettes col-m-6 col-4">'.
         $img.
