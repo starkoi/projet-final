@@ -1,13 +1,9 @@
-<?php
-require_once('DB/connection.php');
-require_once('views/code_favori.php');
-?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title><?= $page_name; ?></title>
-    <meta name="description" content="<?= $content;?>"/>
+    <meta name="description" content="<?= $desc;?>"/>
     <link href="https://fonts.googleapis.com/css?family=Muli|PT+Sans+Narrow" rel="stylesheet">
     <link rel="stylesheet" href="style/normalize.css"/>
     <link rel="stylesheet" href="style/main.css"/>
@@ -16,9 +12,9 @@ require_once('views/code_favori.php');
     <meta name="author" content="Sonya Bouchard et Carolina Yi"/>
     <meta name="robots" content="noindex, nofollow"/>
     <meta property="og:url" content="wwww.avalanche-de-desserts.projetisi.com"/>
-    <meta property="og:title" content="Le meilleur gâteau au chocolat â Montréal"/>
-    <meta property="og:description" content="Avalanche de desserts sert le meilleur gâteau au chocolat à Montréal Goûtez nos délicieux gâteaux, tartes, muffins et beaucoup plus! Essayez nos produits fraîchement cuits et des gâteaux personnalisés"/>
-    <meta property="og:image" content="images/images-gateaux/meilleur-gateau.jpg"/>
+    <meta property="og:title" content="<?= $og_title;?>"/>
+    <meta property="og:description" content="<?= $og_desc;?>"/>
+    <meta property="og:image" content="<?= $og_img;?>"/>
     <!--[if lt IE9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
