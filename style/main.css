@@ -204,7 +204,7 @@ div#coeur{
 h1{
     text-align: center;
     font-size: 2.5em;
-    margin-top: 2%;
+    margin-top: 6%;
     margin-bottom: 2%;
     font-family: 'PT Sans Narrow', sans-serif;
 }
@@ -217,6 +217,7 @@ h3{
     font-family: 'PT Sans Narrow', sans-serif;
     font-size: 1.5em;
     width: 90%;
+    height: 42px;
 }
 a, p{
     font-family: 'Muli', sans-serif;
@@ -315,12 +316,45 @@ main{
 .en_savoir_plus:hover{
     color: black;
 }
-.pub_lait{
+.pub{
  width: 100%;
 
 }
 /****FIN DE LA PAGE D'ACCUEIL MOBILE****/
 
+/************page de recherche.php***************/
+#main_recherche .h3_index{
+    margin-left: 2%;
+}
+#main_recherche p{
+    text-align: center;
+}
+/*aside{
+    display: block;
+    text-align: center;
+}
+.pub{
+    width: 50%;
+}*/
+#main_recherche .conteneur_favoris_index{
+    width: 100%;
+    float: right;
+    text-align: right;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+#main_recherche .favoris_index:hover{
+    color: orangered;
+}
+#main_recherche .favoris_index {
+    display: inline-block;
+    background-color: darkseagreen;
+    color: white;
+    font-weight: bold;
+    padding: 2%;
+    text-align: center;
+    width: 100%;
+}
 /******BIOGRAPHIE MOBILE**********/
 
 #main_bio{
@@ -599,15 +633,19 @@ div.container-favori{
 
 #vider-favori{
     text-align: center;
+    display: inline-block;
+    width: 100%;
+
 }
 #button-vider-favori{
     width: 100%;
-    display: inline;
+    display: inline-block;
     height: 35px;
     margin-bottom: 1%;
     font-weight: bold;
     background-color: darkseagreen;
     color: white;
+    border:2px solid black;
 }
 #button-vider-favori:hover{
     color: black;
@@ -847,14 +885,14 @@ footer{
     }
     #main_accueil h3{
         width: 90%;
-        min-height: 42px;
+        height: 42px;
     }
     #main_accueil h2:first-of-type{
         margin-left: 4%;
     }
     #main_accueil section{
-        display: inline;
-        float: left;
+        display: inline-block;
+        width: 100%;
        margin-left: 2%;
         margin-bottom: 2%;
     }
@@ -867,10 +905,12 @@ footer{
         float: right;
         margin-right: 2%;
     }
-    .pub_lait{
+    #main_accueil aside h3{
+        height: 100%;
+    }
+    .pub{
         display: inline;
         float: right;
-        position: static;
         height: 150px;
     }
     #main_accueil .favoris_index{
@@ -894,7 +934,45 @@ footer{
         padding: 2%;
         margin: 2% 2% 2% 0;
     }
+    /************page de recherche.php***************/
 
+    #main_recherche aside{
+       display: inline-block;
+        float: right;
+        margin-right: 2%;
+    }
+    #main_recherche section{
+       display: inline-block;
+        margin-left: 2%;
+    }
+    #main_recherche .content_index{
+        margin-bottom: 2%;
+    }
+    #main_recherche .h3_index{
+        margin-left: 2%;
+    }
+    .pub{
+        width: 100%;
+        height: 100%;
+        margin-bottom: 2%;
+    }
+    #main_recherche .conteneur_favoris_index{
+        width: 80%;
+        text-align: center;
+        margin-right: 2%;
+        background-color: darkseagreen;
+        padding: 2%;
+        font-weight: bold;
+    }
+    .favoris_index{
+        color: white;
+    }
+    .fa-heart:hover{
+        color:red;
+    }
+    .favoris_index:hover{
+        color: orangered;
+    }
     /*************BIOGRAPHIE TABLETTE***************/
 
     .section_gauche {
@@ -1121,7 +1199,7 @@ footer{
     }
 
     /***ACCUEIL***/
-    .pub_lait{
+    .pub{
         height: 200px;
     }
 
