@@ -64,8 +64,6 @@ function get_recettes_by_cat($cat = null, $start_pag = 0, $per_page) {
     return $result;
 }
 
-
-
 function get_recettes_vedettes($vedette) {
     global $mysqli;
     $query_str =    "SELECT rct.*, cat.id `cat_id`,cat.nom `cat_nom` ".
