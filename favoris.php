@@ -17,8 +17,12 @@ require_once('views/page_top.php');
                 $img_recette = get_full_image_path($detail_recette[$recette_id]);
                 $item_name = 'cart_item_' . $recette_id;
                 ?>
-                <?php  echo '<div class="container-favori col-m-4 col-4">';?>
-                <?php  echo"<img class=\"favori-image col-m-12 col-12\" src=\"$img_recette\" alt=\". ". ucfirst($recette_id['nom']).".\"/>";?>
+                <?php  echo '<div class="container-favori col-m-6 col-4">';?>
+                <?php  echo
+                    '<a class="hover_img" href="details.php?id_recette='.$recette_id.((!is_null($cat_id))?"&cat_id=".$cat_id : "").'">'.
+                        '<img class="favori-image col-m-12 col-12" src="'.$img_recette.'" alt="'.ucfirst($recette_id['nom']).'"/>'.
+                    '</a>';
+                ?>
                 <?php  echo"<label for=\"$item_name\"></label>";?>
                 <?php  echo"<h3 id='title-favori'>" . ucfirst($detail_recette[$recette_id]['nom'])."</h3>";?>
                 <a href='?op=maz&itemid=<?= $recette_id ?>' class="btn_retirer">X</a>
