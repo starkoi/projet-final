@@ -52,6 +52,7 @@ function get_recettes_by_cat($cat = null, $start_pag = 0, $per_page) {
         "rct.categorie_id = cat.id ".
         ((!is_null($cat))? "AND rct.categorie_id = ".$cat." " : "").
         "LIMIT ".$start_pag.", ".$per_page; // Contruction de la requète SQL
+//    var_dump($query_str);
     $res = $mysqli->query($query_str); // Lancement de la requète
     $result = array(); // Créer un tableau vide pour mettre toutes les data
     if ($res && ($res->num_rows > 0)) { // la requete a marché et il y a des enregistrements

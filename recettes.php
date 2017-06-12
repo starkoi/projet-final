@@ -4,11 +4,17 @@ $cat_id = (isset($_GET['cat_id'])? $_GET['cat_id']: null);
 $num_page = (isset($_GET['page'])? $_GET['page']: 1);
 $per_page = 4;
 $start_position = 0;
+if(is_numeric($num_page)){
+    $start_position = ($num_page-1) * $per_page;
+}
 $recettes_for_pagination = get_recettes_by_cat($cat_id, $start_position, $per_page);
 $recettes_temp = reset($recettes_for_pagination);
 
 $recettes_by_cat = get_recettes_avec_cats($cat_id);
 $total_record = count($recettes_by_cat);
+$total_pages = ceil($total_record/$per_page);
+//var_dump($total_pages, $total_record);
+
 
 $recettes_temp = reset($recettes_for_pagination);
 
@@ -21,9 +27,6 @@ $og_desc = "Un de ses recettes favories du chef Paul Gabini \"creme bruleé\"";
 $og_img = "images/desserts/creme-brulee.jpg";
 require_once('views/page_top.php');
 
-if(is_numeric($num_page)){
-    $start_position = ($num_page-1) * $per_page;
-}
 ?>
 <h1><?= (isset($_GET['cat_id'])? ucfirst($recettes_temp['cat_nom']): null) ?></h1>
 <?php
@@ -51,7 +54,6 @@ echo '</section>'.
 if ($total_record==0){
     echo 'il n\'y a pas de recettes à montrer';
 }
-$total_pages = $total_record/$per_page;
 
 ?>
 <div id="pagination_recettes">
@@ -61,7 +63,7 @@ $total_pages = $total_record/$per_page;
     }
     for($i=1; $i<=$total_pages; $i++){
         if($i==$num_page){
-            echo $i . "  ";
+            echo "<p>" .$i ."</p>";
         }else {
             echo "<a href='recettes.php?page=" . $i . ((!is_null($cat_id))?"&cat_id=".$cat_id : "")."'>$i </a>";
         }
