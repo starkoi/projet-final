@@ -69,27 +69,29 @@ require_once('views/page_top.php');
     }
     ?>
 </section>
-<aside class="col-m-2 col-2">
+<aside class="col-m-2 col-2 aside">
     <img class="col-m-12 col-12 pub" src="images/publicite/publicite-hellmanns.jpg" alt="publicite de mayo">
-</aside>
-<aside class="col-m-2 col-2 aside_recettes">
-    <h3 class="h3_aside">Autres recettes</h3>
-    <?php
-    $recettes = get_recettes_vedettes(4);
-    foreach ($recettes as $id => $r) {
-        $img = '<a class="hover_img" href="details.php?id_recette=' . $id .'">'.'<img class="img_index col-m-12 col-12" src="' . $r["full_image_path"] . '" alt= "'.ucfirst($r["nom"]).'"/>'. '</a>';
-        echo    '<div class="content_index  col-m-12 col-12">'.
-                    $img.
-                    '<div class="div_h3_aside">'.'<h3 class="h3_aside">' .ucfirst($r["nom"]) . '</h3>' . '</div>'.
-                    '<div class="conteneur_favoris_aside">'.
-                        "<a class='favoris_aside' ".
-                        "href='?op=ajouter&itemid=".$id.
-                        ((!is_null($num_page))?"&page=".$num_page : "").
-                        "'><span class=\"fa fa-heart\" aria-hidden=\"true\"></span></a>".
-                    '</div>'.
-                    '<a class="en_savoir_plus_aside" href="details.php?id_recette=' . $id .'">Voir la recette</a>'.
-                '</div>';
-    }
-    ?>
+<!--</aside>
+<aside class="col-m-2 col-2 aside_recettes">-->
+    <div class="aside_recettes">
+        <h3 class="h3_aside">Autres recettes</h3>
+        <?php
+        $recettes = get_recettes_vedettes(4);
+        foreach ($recettes as $id => $r) {
+            $img = '<a class="hover_img" href="details.php?id_recette=' . $id .'">'.'<img class="img_index col-m-12 col-12" src="' . $r["full_image_path"] . '" alt= "'.ucfirst($r["nom"]).'"/>'. '</a>';
+            echo    '<div class="content_index  col-m-12 col-12">'.
+                        $img.
+                        '<div class="div_h3_aside">'.'<h3 class="h3_aside">' .ucfirst($r["nom"]) . '</h3>' . '</div>'.
+                        '<div class="conteneur_favoris_aside">'.
+                            "<a class='favoris_aside' ".
+                            "href='?op=ajouter&itemid=".$id.
+                            ((!is_null($num_page))?"&page=".$num_page : "").
+                            "'><span class=\"fa fa-heart\" aria-hidden=\"true\"></span></a>".
+                        '</div>'.
+                        '<a class="en_savoir_plus_aside" href="details.php?id_recette=' . $id .'">Voir la recette</a>'.
+                    '</div>';
+        }
+        ?>
+    </div>
 </aside>
 <?php require_once ('views/page_bottom.php'); ?>
