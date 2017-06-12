@@ -54,16 +54,9 @@ header{
     float: left;
 }
 div#logo_paul_gabini a{
-    width: 80px;
-    height: 100%;
-    display: block;
-    float: left;
+   width: 100%;
+    display: inline-block;
 }
-/*.nav-mobile{
-    width: 100%;
-    display: inline;
-    float: right;
-}*/
 #menu-secondaire{
     width: 80%;
     display: inline;
@@ -95,7 +88,6 @@ header .menu-btn{
 }
 
 header .menu-btn span{
-    /* float: right;*/
     display: block; /*les span se placent les uns sous les autres*/
     width: 40px; /*largeur de la rayure*/
     height: 5px; /*hauteur de la rayure*/
@@ -244,7 +236,7 @@ main{
 }
 .h3_index{
     display: inline-block;
-    width: 100%;
+    width: 90%;
 }
 .hover_img{
     display: block;
@@ -274,6 +266,12 @@ main{
 }
 #main_accueil .aside_recettes{
     display: none;
+}
+.aside{
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin: 2% 0 0 0;
 }
 .content_index{
     border: 1px dashed black;
@@ -316,8 +314,11 @@ main{
 .en_savoir_plus:hover{
     color: black;
 }
+.en_savoir_plus_aside:hover{
+    color: black;
+}
 .pub{
- width: 100%;
+ width: 50%;
 
 }
 /****FIN DE LA PAGE D'ACCUEIL MOBILE****/
@@ -329,13 +330,6 @@ main{
 #main_recherche p{
     text-align: center;
 }
-/*aside{
-    display: block;
-    text-align: center;
-}
-.pub{
-    width: 50%;
-}*/
 #main_recherche .conteneur_favoris_index{
     width: 100%;
     float: right;
@@ -683,7 +677,6 @@ div.container-favori{
 .conteneur_favoris{
     margin-left: auto;
     margin-right: auto;
-    width: 25%;
     min-width: 16%;
     text-align: center ;
 
@@ -692,7 +685,7 @@ div.container-favori{
     text-align: center;
     color: white;
     background-color: darkseagreen;
-    padding: 2%;
+    padding: 1%;
     font-weight: bold;
     line-height: 40px;
 
@@ -892,9 +885,14 @@ footer{
     }
     #main_accueil section{
         display: inline-block;
-        width: 100%;
        margin-left: 2%;
         margin-bottom: 2%;
+    }
+    #main_accueil .content_index{
+        margin-bottom: 2%;
+    }
+    .aside{
+        margin: 0 2% 2% 0;
     }
     .h3_aside{
         margin: 4% 2%!important;
@@ -903,7 +901,6 @@ footer{
     #main_accueil aside{
         display: inline;
         float: right;
-        margin-right: 2%;
     }
     #main_accueil aside h3{
         height: 100%;
@@ -911,7 +908,6 @@ footer{
     .pub{
         display: inline;
         float: right;
-        height: 150px;
     }
     #main_accueil .favoris_index{
         width: 80%;
@@ -946,15 +942,10 @@ footer{
         margin-left: 2%;
     }
     #main_recherche .content_index{
-        margin-bottom: 2%;
+        margin: 0 0 2% 0;
     }
     #main_recherche .h3_index{
         margin-left: 2%;
-    }
-    .pub{
-        width: 100%;
-        height: 100%;
-        margin-bottom: 2%;
     }
     #main_recherche .conteneur_favoris_index{
         width: 80%;
@@ -964,8 +955,9 @@ footer{
         padding: 2%;
         font-weight: bold;
     }
-    .favoris_index{
+    #main_recherche.favoris_index{
         color: white;
+        padding: 0;
     }
     .fa-heart:hover{
         color:red;
@@ -1021,7 +1013,9 @@ footer{
         width: 80%;
         text-align: center;
     }
-
+    div.container_recettes{
+        width: 50%;
+    }
     .en-savoir-plus-recettes{
         display: block;
         float: right;
@@ -1069,7 +1063,7 @@ footer{
 
     #title-favori{
         width: 87%;
-        height: 38px;
+        height: 48px;
     }
 
     #aside-favori{
@@ -1198,11 +1192,6 @@ footer{
         margin: 0 auto;
     }
 
-    /***ACCUEIL***/
-    .pub{
-        height: 200px;
-    }
-
     /*************PAGE RECETTES*******************************/
 
     .ajouter-favori-recettes{
@@ -1215,7 +1204,9 @@ footer{
         width: 80%;
         text-align: center;
     }
-
+    div.container_recettes{
+        width: 33.33%;
+    }
     .en-savoir-plus-recettes{
         display: block;
         float: right;
