@@ -49,7 +49,6 @@ header{
 }
 #logo_paul_gabini img{
     width: 142px;
-    height: 100%;
     display: inline;
     float: left;
 }
@@ -877,7 +876,7 @@ footer{
         width: 90%;
     }
     #main_accueil h3{
-        width: 90%;
+        width: 92%;
         height: 42px;
     }
     #main_accueil h2:first-of-type{
@@ -1191,6 +1190,14 @@ footer{
         width: 90%;
         margin: 0 auto;
     }
+    /*******************ACCUEIL DESKTOP******************************/
+
+    #main_accueil h3{
+        width: 100%;
+    }
+    #main_accueil .favoris_index {
+        padding: 1%;
+    }
 
     /*************PAGE RECETTES*******************************/
 
@@ -1198,7 +1205,7 @@ footer{
         display: block;
         margin: 2% 2% 3% 0;
         background-color: darkseagreen;
-        padding: 2%;
+        padding: 1%;
         font-weight: bold;
         color: white;
         width: 80%;
