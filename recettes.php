@@ -44,8 +44,8 @@ foreach ($recettes_for_pagination as $id => $r){
 }
 echo '</section>'.
     '<aside id="aside_recettes" class="col-m-2 col-2">'.
-        '<img class="col-m-3 col-12 pub_recettes" src="images/publicite/publicite-cold-beers.jpg" alt="publicité d\'hamburger"/>'.
-        '<img class="col-m-3 col-12 pub_recettes" src="images/publicite/publicite-hellmanns.jpg" alt="publicité d\'hellmanns"/>'.
+        '<img class="col-m-12 col-12 pub_recettes" src="images/publicite/publicite-cold-beers.jpg" alt="publicité d\'hamburger"/>'.
+        '<img class="col-m-12 col-12 pub_recettes" src="images/publicite/publicite-hellmanns.jpg" alt="publicité d\'hellmanns"/>'.
     '</aside>';
 
 if ($total_record==0){
