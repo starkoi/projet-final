@@ -2,10 +2,10 @@
 -- version 4.6.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 10, 2017 at 12:35 PM
--- Server version: 5.7.14
--- PHP Version: 5.6.25
+-- Client :  127.0.0.1
+-- Généré le :  Lun 12 Juin 2017 à 01:51
+-- Version du serveur :  5.7.14
+-- Version de PHP :  5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `paul_gabini`
+-- Base de données :  `paul_gabini`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categorie`
+-- Structure de la table `categorie`
 --
 
 CREATE TABLE `categorie` (
@@ -32,7 +32,7 @@ CREATE TABLE `categorie` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `categorie`
+-- Contenu de la table `categorie`
 --
 
 INSERT INTO `categorie` (`id`, `nom`) VALUES
@@ -43,7 +43,7 @@ INSERT INTO `categorie` (`id`, `nom`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `recettes`
+-- Structure de la table `recettes`
 --
 
 CREATE TABLE `recettes` (
@@ -60,7 +60,7 @@ CREATE TABLE `recettes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `recettes`
+-- Contenu de la table `recettes`
 --
 
 INSERT INTO `recettes` (`id`, `nom`, `fichier_img`, `portion`, `temps_preparation`, `cuisson`, `ingredients`, `preparation`, `categorie_id`, `vedette`) VALUES
@@ -72,7 +72,7 @@ INSERT INTO `recettes` (`id`, `nom`, `fichier_img`, `portion`, `temps_preparatio
 (6, 'Poulet à la moutarde', 'poulet-moutarde.jpg', 4, 10, 20, '<ul>\n<li>1/3 tasse de beurre fondu.</li>\n<li>1/3 miel.</li>\n<li>1/4 tasse de moutarde de Dijon.</li>\n<li>4 c. à thé de poudre de cari.</li>\n<li>une pincée de poivre de Cayenne.</li>\n<li>4 poitrines de poulet désossées.</li>\n</ul>\n', '<ol>\n<li>Dans un bol moyen, combiner le beurre fondu, le miel, la moutarde, le cari et le poivre de Cayenne; bien mélanger. Couvrir et laisser mariner au réfrigérateur pendant au moins 4 heures, voire toute une nuit.</li>\n<li>Préchauffer le four à 375F.</li>\n<li>Cuire le poulet au four, couvert, pendant 10 minutes. Découvrir le plat et cuire encore au moins 10 minutes , jusqu\'à ce que le centre des poitrines de poulet ne soit plus rose. Le temps de cuisson total dépendra de l\'épaisseur de poitrines de poulet.</li>\n</ol>\n', 2, 2),
 (7, 'Pain aux bananes ', 'pain-aux-bananes.jpg', 15, 10, 60, '<ul>\n<li>1/2 tasse de beurre fondu.</li>\n<li>1 tasse de sucre. </li>\n<li>2 oeufs.</li>\n<li>1 c. à thé de vanille.</li>\n<li>1 1/2 tasse de farine tout usage.</li>\n<li>1 c. à thé de bicarbonate de soude.</li>\n<li>1/2 c. à thé de sel.</li>\n<li>1/2 tasse de crème sure.</li>\n<li>1/2 tasse de noix de Grenoble hachées.</li>\n<li>2 bananes moyennes.</li>\n</ul>', '<ol>\n<li>Préchauffer le four à 350F.</li>\n<li>Dans un grand bol, mélanger le beurre fondu et le sucre. Ajouter les œufs et la vanille; bien mélanger. Dans un autre bol, mélanger la farine, le bicarbonate de soude et le sel. Ajouter ce mélange au mélange de beurre et battre jusqu\'à onctuosité.Finalement, incorporer la crème sure, les noix et les bananes. Verser le tout dans le moule préparé.</li>\n<li>Cuire au four pendant 60 minutes, ou jusqu\'à ce qu\'un cure-dent inséré au centre du pain en ressorte propre. Laisser refroidir dans le moule 10 minutes avant de démouler sur une grille et laisser refroidir complètement.</li>\n</ol>', 3, 3),
 (8, 'Brownie au caramelo', 'brownies.jpg', 6, 20, 20, '<ul>\n<li>3 œufs.</li>\n<li> 1/4 de tasse de sucre.</li>\n<li>1/2 de tasse de farine.</li>\n<li>1/4 tasse de chocolat noir.</li>\n<li>1/4 de tasse de beurre.</li>\n<li>1/3 de tasse de caramels mous.</li>\n<li>1/3 de tasse de noix de pécan.</li>\n</ul>', '<ol>\n<li>Dans un saladier, battez les œufs avec un fouet.</li>\n<li>Incorporez le sucre et la farine.</li>\n<li>Faites fondre le chocolat et le beurre. Mélangez et ajoutez à la préparation.<li>\n<li>Coupez les caramels en petites pépites, concassez les noix de pécan.</li>\n<li>Mélangez-les à la pâte et versez dans un moule carré (20 x 20 cm), tapissé de papier cuisson.</li>\n<li>Faites cuire 20 à 30 min dans le four préchauffé à 180C </li>\n<li>Laissez ensuite totalement refroidir le brownie avant de le couper en parts.</li>\n</ol>', 3, 3),
-(9, 'Créme brûlée ', 'creme-brulee.jpg', 6, 15, 60, '<ul>\n<li>2 tasse de crème 35%.<li>\n<li>1/3 tasse de sucre.</li>\n<li>6 jaunes d\'oeufs.</li>\n<li>1 c. à thé d\'extrait de vanille.</li>\n<li>3 c. à soupe de crème irlandaise</li>\n<li>Sucre fin.</li>', '<ol>\n<li>Préchauffer le four à 300F. Placer 6 ramequin au fond d\'une tôle à rebords.</li>\n<li>Combiner la crème et le sucre dans une casserole à feu moyen et cuire en brassant jusqu\'à ce que le tout soit bien chaud et que le sucre soit dissout. Dans un bol, fouetter ensemble les jaunes d’œufs, la vanille et la crème irlandaise.</li>\n<li>Au mélange d’œufs, incorporer 1/3 tasse du mélange de crème chaude, en fouettant pour éviter que le mélange ne roule. Une fois le 1/3 de tasse incorporé, ajouter le reste du liquide chaud, toujours en fouettant.>/li>\n<li>Verser le mélange dans le ramequins et remplir la tôle d\'eau, jusqu\'à mi-hauteur des ramequins, afin de créer un bain-marie. Cuire le tout au four de 50 à 60 minutes, jusqu\'à ce que le centre soit pris. Retirer du four et déposer les ramequins sur une grille; laisser reposer 1 heure à température de la pièce.</li>\n<li>Utiliser une torche de cuisine pour faire fondre le sucre sur le dessus, en passant la flamme rapidement au dessous.\n</li>\n</ol>', 3, 3),
+(9, 'Créme brûlée ', 'creme-brulee.jpg', 6, 15, 60, '<ul>\n<li>2 tasse de crème 35%.</li>\n<li>1/3 tasse de sucre.</li>\n<li>6 jaunes d\'oeufs.</li>\n<li>1 c. à thé d\'extrait de vanille.</li>\n<li>3 c. à soupe de crème irlandaise</li>\n<li>Sucre fin.</li>', '<ol>\n<li>Préchauffer le four à 300F. Placer 6 ramequin au fond d\'une tôle à rebords.</li>\n<li>Combiner la crème et le sucre dans une casserole à feu moyen et cuire en brassant jusqu\'à ce que le tout soit bien chaud et que le sucre soit dissout. Dans un bol, fouetter ensemble les jaunes d’œufs, la vanille et la crème irlandaise.</li>\n<li>Au mélange d’œufs, incorporer 1/3 tasse du mélange de crème chaude, en fouettant pour éviter que le mélange ne roule. Une fois le 1/3 de tasse incorporé, ajouter le reste du liquide chaud, toujours en fouettant.>/li>\n<li>Verser le mélange dans le ramequins et remplir la tôle d\'eau, jusqu\'à mi-hauteur des ramequins, afin de créer un bain-marie. Cuire le tout au four de 50 à 60 minutes, jusqu\'à ce que le centre soit pris. Retirer du four et déposer les ramequins sur une grille; laisser reposer 1 heure à température de la pièce.</li>\n<li>Utiliser une torche de cuisine pour faire fondre le sucre sur le dessus, en passant la flamme rapidement au dessous.\n</li>\n</ol>', 3, 3),
 (10, 'Tacos', 'tacos.jpg', 4, 15, 5, '<ul>\n<li>75 ml d’huile de canola.</li>\n<li>1 gousse d’ail hachée.</li>\n<li>1 poivron rouge ou vert coupée en lanières.</li>\n<li>4 tortillas ou taco à vous de décider.</li>\n<li>125 ml de fromage Monteray Jack.</li>\n<li>1 tomates coupée en petits cubes.</li>\n<li>Sel, poivre au goût.</li>\n</ul>', '<ol>\n<li>Dans un poêlon chauffé à feu mi-fort avec l’huile, suer l’ail (environ 30 secondes).</li>\n<li>Ajouter les poivrons et les champignons et poursuivre la cuisson une minute</li>\n<li>Ajouter le boeuf et le cumin, poursuivre la cuisson un autre minute.</li>\n<li>Garnir le tortillas avec le mélange de boeuf.</li>\n<li>Garnir avec en ordre: le fromage, les tomates, la crème sure, et les feuilles de coriandre.</li>\n</ol>', 2, 4),
 (11, 'Brochettes de poulet', 'poulet-satay.jpg', 4, 45, 10, '<ul>\n<li>2 blancs de poulet.</li>\n<li>150 ml de lait de coco.>/li>\n<li>4 c. à soupe de beurre de cacahuètes.</li>\n<li>2 c. à soupe de cassonade ou miel.</li>\n<li>1 c. à soupe de curry en poudre.</li>\n<li>1 gousse d\'ail</li>\n</ul>', '<ol>\n<li>Découpez le poulet en lamelles assez fines, placez-le dans un bol avec 1 c. à soupe d\'huile et le curry, mélangez, filmez et réservez au frais.</li>\n<li>Dans une casserole, mettez 1 c. à soupe d\'huile, la gousse d\'ail et le gingembre pressés ou hachés (gardez juste la pulpe), faites revenir 1 minute, puis ajoutez la cassonade, la sauce soja, puis le beurre de cacahuètes et le lait de coco, mélangez bien pendant 2 minutes à feu moyen, réservez</li>\n<li>Enfilez les morceaux de poulet sur des petites brochettes en bois, puis faites les dorer dans une poêle légèrement huilée pendant 10 minutes en les retournant régulièrement. Autre possibilité, passez les brochettes 10 minutes à 180°C au four, en retournant au bout de 5 minutes.</li>\n</ol>', 1, 4),
 (12, 'Lasagne aux fruits de mers', 'lasagne-aux-fruits-de-mer.jpg', 6, 15, 60, '<ul>\n<li>Mélange de crevettes et de pétoncles.</li>\n<li>1 sac de 340 g, surgelés, décongelés et égouttés chair de homard.</li>\n<li>1 sac, cuite et surgelée de 200 g, décongelée et égouttée sauce alfredo.</li>\n<li>2 contenants de 600 ml chacun, légère lasagnes.</li>\n</ul>', '<ol>\r\n<li>Éponger les crevettes, les pétoncles et la chair de homard à l\'aide de papier absorbant afin de retirer l\'excédent d\'eau.</li>\r\n<li>Verser 80 ml (1/3 de tasse) de sauce Alfredo dans la mijoteuse.</li>\r\n<li>Couvrir de trois lasagnes, puis du tiers du mélange de crevettes et pétoncles, du tiers du homard et, si désiré, du tiers des bébés épinards et de l\'aneth. Napper de 310 ml (1 1/4 tasse) de sauce Alfredo. Répéter deux fois afin de former trois étages.</li>\r\n<li>Couvrir des trois dernières lasagnes, puis napper de la sauce Alfredo restante et du fromage.</li>\r\n<li>Couvrir et cuire 1 heure à faible intensité, jusqu\'à ce que les lasagnes soient al dente.</li>\r\n</ol>', 2, 0),
@@ -88,32 +88,32 @@ INSERT INTO `recettes` (`id`, `nom`, `fichier_img`, `portion`, `temps_preparatio
 (22, 'Créme brûlée ', 'creme-brulee.jpg', 6, 15, 60, '<ul>\r\n<li>2 tasse de crème 35%.<li>\r\n<li>1/3 tasse de sucre.</li>\r\n<li>6 jaunes d\'oeufs.</li>\r\n<li>1 c. à thé d\'extrait de vanille.</li>\r\n<li>3 c. à soupe de crème irlandaise</li>\r\n<li>Sucre fin.</li>', '<ol>\r\n<li>Préchauffer le four à 300F. Placer 6 ramequin au fond d\'une tôle à rebords.</li>\r\n<li>Combiner la crème et le sucre dans une casserole à feu moyen et cuire en brassant jusqu\'à ce que le tout soit bien chaud et que le sucre soit dissout. Dans un bol, fouetter ensemble les jaunes d’œufs, la vanille et la crème irlandaise.</li>\r\n<li>Au mélange d’œufs, incorporer 1/3 tasse du mélange de crème chaude, en fouettant pour éviter que le mélange ne roule. Une fois le 1/3 de tasse incorporé, ajouter le reste du liquide chaud, toujours en fouettant.>/li>\r\n<li>Verser le mélange dans le ramequins et remplir la tôle d\'eau, jusqu\'à mi-hauteur des ramequins, afin de créer un bain-marie. Cuire le tout au four de 50 à 60 minutes, jusqu\'à ce que le centre soit pris. Retirer du four et déposer les ramequins sur une grille; laisser reposer 1 heure à température de la pièce.</li>\r\n<li>Utiliser une torche de cuisine pour faire fondre le sucre sur le dessus, en passant la flamme rapidement au dessous.\r\n</li>\r\n</ol>', 3, 0);
 
 --
--- Indexes for dumped tables
+-- Index pour les tables exportées
 --
 
 --
--- Indexes for table `categorie`
+-- Index pour la table `categorie`
 --
 ALTER TABLE `categorie`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `recettes`
+-- Index pour la table `recettes`
 --
 ALTER TABLE `recettes`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables exportées
 --
 
 --
--- AUTO_INCREMENT for table `categorie`
+-- AUTO_INCREMENT pour la table `categorie`
 --
 ALTER TABLE `categorie`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT for table `recettes`
+-- AUTO_INCREMENT pour la table `recettes`
 --
 ALTER TABLE `recettes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
