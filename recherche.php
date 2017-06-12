@@ -4,7 +4,7 @@ $cat_id = (isset($_GET['cat_id'])? $_GET['cat_id']: null);
 $id_recette = (isset($_GET['id_recette'])? $_GET['id_recette']: null);
 $num_page = (isset($_GET['page'])? $_GET['page']: null);
 $recherche_recette = array();
-if(isset($_POST['search'])){
+if((isset($_POST['search']))&&(trim($_POST['search'])!='')){
     $recherche_recette = recherche_recette($_POST['search']);
 }
 
@@ -20,7 +20,7 @@ require_once('views/page_top.php');
 <h1>Résultat de votre recherche</h1>
 <section class="col-m-9 col-9">
     <?php
-    if(count($recherche_recette)>0){
+    if(count($recherche_recette)>0 ){
         foreach ($recherche_recette as $id => $r) {
             $img = '<a class="hover_img" href="details.php?id_recette=' . $id .'">'.'<img class="img_index col-m-12 col-12" src="' . $r["full_image_path"] . '" alt="'.ucfirst($r["nom"]).'"/>'. '</a>';
             echo    '<div class="content_index col-m-6 col-4">'.
@@ -41,7 +41,7 @@ require_once('views/page_top.php');
 
     ?>
 </section>
-<aside class="col-m-2 col-2">
+<aside class="col-m-2 col-2 aside">
     <img class="col-m-12 col-12 pub" src="images/publicite/publicite-hellmanns.jpg" alt="publicite de mayo">
 </aside>
 <?php require_once ('views/page_bottom.php'); ?>
