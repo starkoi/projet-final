@@ -1,5 +1,4 @@
 <?php
-
 $total = 0;
 foreach ($favori as $qte) {
     $total += $qte;
@@ -19,7 +18,7 @@ foreach ($favori as $qte) {
             </div>
     </header>
     <main id="main_<?= $name_main; ?>">
-        <form id="barre_de_recherche" action="recherche.php" method="post">
+        <form id="barre_de_recherche" action="recherche.php" method="post" onsubmit="if($('#search').val()==''){ alert('Veuillez saisir des lettres pour votre recherche!'); return false; }">
             <input type="search" id="search" name="search"/>
             <input type="submit" id="submit_search" name="submit" value="Rechercher">
         </form>
